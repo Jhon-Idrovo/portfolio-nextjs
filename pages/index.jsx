@@ -20,18 +20,20 @@ export default function Home() {
         <title>B.E.</title>
       </Head>
       <section className="mx-4 mb-24 h-full relative flex flex-col justify-items-start content-end">
-        <div className="absolute top-0 right-0 left-1/2 bottom-1/2">
+        <div className="absolute top-0 right-0 left-1/4 bottom-1/4">
           <Image
-            src="/images/me.jpg"
+            src="/images/me-square.png"
             alt="Portrait"
             layout="responsive"
             width="9"
-            height="16"
+            height="9"
             quality="100"
           />
         </div>
-        <h1 className=" text-txt-base w-1/2 z-10">{texts.indexHero}</h1>
-        <p className="text-txt-base w-1/2 z-10 mt-4">
+        <h1 className=" hero-header text-txt-base w-1/2 z-10 ">
+          {texts.indexHero}
+        </h1>
+        <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
           {texts.indexHeroSubheader}
         </p>
         <button className="CTA w-max self-center mt-10">
@@ -126,6 +128,17 @@ export default function Home() {
         <button className="CTA mt-CTA text-primary mx-auto table">
           {texts.viewAllMyWork}
         </button>
+      </section>
+      <section className="section">
+        <h1 className="text-txt-base mx-auto w-min">{texts.navMenuItems[2]}</h1>
+        {texts.services.map((service, index) => (
+          <BnftsCard
+            benefit={service}
+            CTA={texts.contactMe}
+            index={index}
+            key={index}
+          />
+        ))}
       </section>
       <section className="section">
         <h1 className="text-txt-base mx-auto w-min">FAQ</h1>

@@ -5,7 +5,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      base: colors.warmGray[800],
+      base: colors.black,
       "base-ligth": warmGray[600],
       "txt-base": colors.white,
       primary: colors.lime[400],

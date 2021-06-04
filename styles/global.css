@@ -100,7 +100,7 @@ svg {
   top: -0.5rem;
 }
 #menu-check {
-  @apply w-full h-full absolute opacity-10 z-10;
+  @apply w-full h-full absolute opacity-0 z-10;
 }
 
 #menu-check:checked + div {
@@ -137,7 +137,10 @@ svg {
   @apply mt-4;
 }
 /* LANDING PAGE */
-
+.hero-header {
+  margin-top: 15%;
+  text-shadow: 4px 2px 8px black;
+}
 .img-bg {
   z-index: -1;
   @apply overflow-hidden absolute top-0 right-0;
