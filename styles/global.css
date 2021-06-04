@@ -38,13 +38,45 @@ body {
   @apply bg-primary shadow-inner;
 }
 
+/* NAV BAR */
 .nav-bar {
   @apply flex content-center justify-between h-12 px-2 py-2 bg-base;
 }
-.nav-logo {
-  @apply text-txt-base;
+
+svg {
+  width: 7rem;
+  height: 3rem;
 }
 
+#bottom {
+  stroke-dasharray: 645;
+  stroke-dashoffset: 645;
+}
+
+#top {
+  stroke-dasharray: 269;
+  stroke-dashoffset: 269;
+}
+
+#inner {
+  stroke-dasharray: 1072;
+  stroke-dashoffset: 1072;
+}
+
+@media screen {
+  #bottom,
+  #top,
+  #inner {
+    animation: sign 4s linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes sign {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
 /* NAV MENU */
 .nav-menu {
   @apply relative flex justify-center items-center w-8 h-8 rounded-full bg-primary;
@@ -98,18 +130,21 @@ body {
   @apply rounded-full p-2 hover:bg-primary hover:text-secondary border-secondary border-solid bg-secondary text-txt-secondary;
   border-width: 1px;
 }
-
-/* LANDING PAGE */
-.hero {
-  @apply h-3/5 relative;
+.section {
+  @apply mx-4 my-24;
 }
+.mt-CTA {
+  @apply mt-4;
+}
+/* LANDING PAGE */
+
 .img-bg {
   z-index: -1;
-  @apply overflow-hidden w-full h-full absolute;
+  @apply overflow-hidden absolute top-0 right-0;
 }
 
 h1 {
-  @apply text-5xl font-semibold;
+  @apply text-3xl font-semibold;
 }
 h2 {
   @apply text-4xl font-semibold;
@@ -117,7 +152,9 @@ h2 {
 h6 {
   @apply font-semibold text-xl;
 }
-
+.CTA {
+  @apply cursor-pointer py-1 px-2 border-txt-primary hover:skew-x-3 bg-primary text-txt-primary;
+}
 .slide-img {
   height: 300px;
   width: 175px;
@@ -130,4 +167,15 @@ h6 {
 }
 .footer-item {
   @apply p-2 font-semibold flex-grow text-center hover:to-base;
+}
+
+/* FAQ */
+.faq-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  @apply text-primary transition-all;
+}
+
+.faq-active {
+  transform: rotate(180deg);
 }

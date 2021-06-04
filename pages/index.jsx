@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import Card from "../components/Card";
+import BnftsCard from "../components/BnftsCard";
+import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
 
 export default function Home() {
@@ -16,29 +19,38 @@ export default function Home() {
       <Head>
         <title>B.E.</title>
       </Head>
-      <section className="hero">
-        <div className="img-bg">
+      <section className="mx-4 mb-24 h-full relative flex flex-col justify-items-start content-end">
+        <div className="absolute top-0 right-0 left-1/2 bottom-1/2">
           <Image
-            src="/images/hero.jpg"
-            alt="Header Image. Office space"
-            layout="fill"
+            src="/images/me.jpg"
+            alt="Portrait"
+            layout="responsive"
+            width="9"
+            height="16"
             quality="100"
-            objectFit="cover"
           />
         </div>
-        <h1 className="text-txt-base p-4 pb-2">{texts.indexHero}</h1>
-        <p className="text-txt-base opacity-75 px-4 pb-2">
+        <h1 className=" text-txt-base w-1/2 z-10">{texts.indexHero}</h1>
+        <p className="text-txt-base w-1/2 z-10 mt-4">
           {texts.indexHeroSubheader}
         </p>
+        <button className="CTA w-max self-center mt-10">
+          {texts.contactMe}
+        </button>
       </section>
-      <section>
-        <h2 className="text-txt-base text-center">{texts.delightWith}</h2>
+      <section className="section">
+        {texts.benefits.map((benefit, index) => (
+          <BnftsCard
+            benefit={benefit}
+            key={index}
+            i={index}
+            CTA={texts.learnMore}
+          />
+        ))}
       </section>
       <section className="bg-base py-6">
-        <div className="flex justify-between p-2">
-          <h6 className="text-txt-base">{texts.myWork}</h6>
-          <h6 className="text-primary">{texts.viewAllMyWork}</h6>
-        </div>
+        <h1 className="text-txt-base text-center mb-4">{texts.myWork}</h1>
+
         <div className="whitespace-nowrap overflow-x-scroll">
           <span className="slide-img">
             <Image
@@ -111,9 +123,15 @@ export default function Home() {
             />
           </span>
         </div>
+        <button className="CTA mt-CTA text-primary mx-auto table">
+          {texts.viewAllMyWork}
+        </button>
       </section>
-      <section>
-        <h6 className="text-txt-base text-center">{texts.workTools}</h6>
+      <section className="section">
+        <h1 className="text-txt-base mx-auto w-min">FAQ</h1>
+        {texts.faq.map((el) => (
+          <FAQ {...el} />
+        ))}
       </section>
     </>
   );
