@@ -12,17 +12,17 @@ function Footer() {
       <nav className="footer-nav">
         <ul className="mx-auto flex">
           <li className="footer-item">
-            <Link href="/portfolio">
+            <Link href="/#portfolio">
               <a>{texts.footerNavIndex}</a>
             </Link>
           </li>
           <li className="footer-item">
-            <Link href="/benefits">
+            <Link href="/#benefits">
               <a>{texts.footerNavIndex1}</a>
             </Link>
           </li>
           <li className="footer-item">
-            <Link href="/contact">
+            <Link href="/#contact">
               <a>{texts.footerNavIndex2}</a>
             </Link>
           </li>

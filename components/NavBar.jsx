@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 import { es, en } from "../lib/texts";
 
@@ -7,11 +8,15 @@ function NavBar() {
   const router = useRouter();
   const { locale } = router;
   const texts = locale === "en" ? en : es;
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <nav className="nav-bar">
       <Link href="/">
         <a className="nav-logo">
           <svg
+            id="sign"
             width="479"
             height="202"
             viewBox="0 0 479 202"
@@ -83,13 +88,22 @@ function NavBar() {
         </a>
       </Link>
       <div className="nav-menu">
-        <input type="checkbox" id="menu-check" />
+        <input
+          type="checkbox"
+          value={isNavOpen}
+          onChange={() => setIsNavOpen((prev) => !prev)}
+          id="menu-check"
+        />
         <div></div>
         <ul className="nav-list">
           {texts.navMenuItems.map((item) => (
-            <li>
-              <Link href={`/${item.toLowerCase()}`} className="nav-menu-item">
-                <a>{item}</a>
+            <li
+              className={`nav-menu-item ${
+                router.pathname === "/" + item.ref ? "active" : ""
+              }`}
+            >
+              <Link href={`/${item.ref}`}>
+                <a onClick={() => setIsNavOpen(false)}>{item.text}</a>
               </Link>
             </li>
           ))}

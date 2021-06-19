@@ -43,7 +43,7 @@ body {
   @apply flex content-center justify-between h-12 px-2 py-2 bg-base;
 }
 
-svg {
+#sign {
   width: 7rem;
   height: 3rem;
 }
@@ -122,10 +122,35 @@ svg {
   @apply fixed right-0 top-12 bottom-0 w-full z-50 overflow-y-scroll flex flex-col justify-center items-center transition-all bg-primary text-txt-primary;
   transform: translateX(100%);
 }
-.nav-list li {
+.nav-menu-item {
   @apply w-max m-4 font-medium text-2xl hover:border-opacity-100 border-opacity-0 border-txt-base border-solid border-b-2;
 }
 
+/* NAV RESPONSIVE  */
+@media only screen and (min-width: 600px) {
+  #menu-check {
+    @apply hidden;
+  }
+  .nav-menu {
+    @apply bg-base rounded-none w-max text-txt-base;
+  }
+  .nav-menu > div {
+    @apply hidden;
+  }
+  .nav-list {
+    @apply static transform-none flex-row bg-base;
+  }
+  .nav-menu-item {
+    @apply text-base text-txt-base border-none px-2 py-1;
+  }
+  .nav-menu-item:hover {
+    @apply bg-primary text-txt-primary;
+  }
+  .nav-menu-item.active {
+    @apply bg-primary text-txt-primary;
+  }
+}
+/* UTILS */
 .btn {
   @apply rounded-full p-2 hover:bg-primary hover:text-secondary border-secondary border-solid bg-secondary text-txt-secondary;
   border-width: 1px;
@@ -164,6 +189,13 @@ h6 {
   @apply mx-2 inline-block;
 }
 
+/* INDEX */
+.hero {
+}
+/* BENEFITS */
+.bnft-ex {
+  @apply relative w-1/2 h-full mx-auto mt-4;
+}
 /* FOOTER */
 .footer-nav {
   @apply max-w-4xl;
@@ -171,7 +203,11 @@ h6 {
 .footer-item {
   @apply p-2 font-semibold flex-grow text-center hover:to-base;
 }
-
+@media only screen and (min-width: 600px) {
+  .footer-nav {
+    display: none;
+  }
+}
 /* FAQ */
 .faq-icon {
   width: 1.25rem;

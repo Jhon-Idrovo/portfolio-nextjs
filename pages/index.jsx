@@ -19,8 +19,8 @@ export default function Home() {
       <Head>
         <title>B.E.</title>
       </Head>
-      <section className="mx-4 mb-24 h-full relative flex flex-col justify-items-start content-end">
-        <div className="absolute top-0 right-0 left-1/4 bottom-1/4">
+      <section className="hero mx-4 mb-24 relative flex flex-col justify-items-start content-end overflow-hidden">
+        <div className="absolute top-0 -right-8 left-1/4 bottom-1/4">
           <Image
             src="/images/me-square.png"
             alt="Portrait"
@@ -36,7 +36,7 @@ export default function Home() {
         <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
           {texts.indexHeroSubheader}
         </p>
-        <button className="CTA w-max self-center mt-10">
+        <button className="CTA w-max self-start mt-10 z-10">
           {texts.contactMe}
         </button>
       </section>
@@ -46,7 +46,7 @@ export default function Home() {
             benefit={benefit}
             key={index}
             i={index}
-            CTA={texts.learnMore}
+            CTA={texts.contactMe}
           />
         ))}
       </section>
@@ -129,18 +129,22 @@ export default function Home() {
           {texts.viewAllMyWork}
         </button>
       </section>
-      <section className="section">
-        <h1 className="text-txt-base mx-auto w-min">{texts.navMenuItems[2]}</h1>
+      <section className="section" id="benefits">
+        <h1 className="text-txt-base mx-auto w-min">
+          {texts.navMenuItems[2].text}
+        </h1>
         {texts.services.map((service, index) => (
           <BnftsCard
             benefit={service}
             CTA={texts.contactMe}
             index={index}
             key={index}
-          />
+          >
+            {service.node}
+          </BnftsCard>
         ))}
       </section>
-      <section className="section">
+      <section className="section" id="faq">
         <h1 className="text-txt-base mx-auto w-min">FAQ</h1>
         {texts.faq.map((el) => (
           <FAQ {...el} />
