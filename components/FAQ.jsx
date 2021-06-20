@@ -8,7 +8,7 @@ function FAQ({ q, a }) {
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex justify-between items-center border-b-2 border-primary"
       >
-        <h6 className="text-primary">{q}</h6>
+        <h4 className="text-primary">{q}</h4>
 
         <svg
           className={`faq-icon ${isOpen ? "faq-active" : null}`}

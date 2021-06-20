@@ -19,8 +19,8 @@ export default function Home() {
       <Head>
         <title>B.E.</title>
       </Head>
-      <section className="hero mx-4 mb-24 relative flex flex-col justify-items-start content-end overflow-hidden">
-        <div className="absolute top-0 -right-8 left-1/4 bottom-1/4">
+      <section className="hero ">
+        <div className="hero-img ">
           <Image
             src="/images/me-square.png"
             alt="Portrait"
@@ -30,17 +30,19 @@ export default function Home() {
             quality="100"
           />
         </div>
-        <h1 className=" hero-header text-txt-base w-1/2 z-10 ">
-          {texts.indexHero}
-        </h1>
-        <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
-          {texts.indexHeroSubheader}
-        </p>
-        <button className="CTA w-max self-start mt-10 z-10">
-          {texts.contactMe}
-        </button>
+        <div className="hero-content">
+          <h1 className=" hero-header text-txt-base w-1/2 z-10 ">
+            {texts.indexHero}
+          </h1>
+          <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
+            {texts.indexHeroSubheader}
+          </p>
+          <button className="CTA hero-btn">{texts.contactMe}</button>
+        </div>
       </section>
-      <section className="section">
+      <section className="section bnfts-section">
+        <h1 className="text-txt-base text-center mb-4">{texts.whyHireMe}</h1>
+
         {texts.benefits.map((benefit, index) => (
           <BnftsCard
             benefit={benefit}
