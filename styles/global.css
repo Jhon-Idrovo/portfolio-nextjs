@@ -242,6 +242,10 @@ h6 {
   }
 }
 @media only screen and (min-width: 850px) {
+  .hero {
+    @apply mx-auto w-3/4;
+    min-height: 551px;
+  }
   .hero-img {
   }
   .hero-content {
@@ -249,12 +253,11 @@ h6 {
   }
   .hero-btn {
   }
-  .hero {
-    @apply mx-auto w-3/4;
-  }
   .hero-header {
     margin-top: 10%;
   }
+}
+@media only screen and (min-width: 1200px) {
 }
 /* BENEFITS */
 .bnft-container {
@@ -264,7 +267,8 @@ h6 {
   @apply text-center justify-items-center text-primary w-2/3 mx-auto;
 }
 .bnft-ex {
-  @apply relative w-1/2 h-full mx-auto mt-4;
+  @apply relative  mx-auto mt-4;
+  height: 67vw;
 }
 .bnft-text {
   @apply max-w-lg mx-auto mt-2 border-2 border-primary text-txt-base p-2 text-center justify-center;
@@ -280,9 +284,10 @@ h6 {
   .bnft-text {
   }
   .bnft-ex {
-    @apply absolute -right-full top-0 px-4 pr-8;
+    @apply absolute -right-full w-1/2 top-0 px-4 pr-8;
     width: 100%;
     min-height: 336px;
+    height: 100%;
   }
   .bnft-title {
     @apply font-medium;
@@ -292,7 +297,7 @@ h6 {
     min-height: 336px;
   }
 }
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 1150px) {
   .bnft-ex {
     height: 90vh;
   }
