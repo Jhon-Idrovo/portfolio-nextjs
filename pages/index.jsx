@@ -10,6 +10,7 @@ import BnftsCard from "../components/BnftsCard";
 import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
 import ServiceCard from "../components/ServiceCard";
+import WorkCard from "../components/WorkCard";
 
 export default function Home() {
   const router = useRouter();
@@ -53,9 +54,15 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className="bg-base py-6">
+      <section className="section">
         <h1 className="text-txt-base text-center mb-4">{texts.myWork}</h1>
-
+        <div className="works">
+          {texts.works.map((w, i) => (
+            <WorkCard index={i} work={w} CTA={texts.seeItLive} />
+          ))}
+        </div>
+      </section>
+      <section className="bg-base py-6">
         <div className="whitespace-nowrap overflow-x-scroll">
           <span className="slide-img">
             <Image

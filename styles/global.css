@@ -334,6 +334,38 @@ h6 {
     @apply col-start-1 col-end-3;
   }
 }
+
+/* WORKS */
+.work-container {
+  @apply mb-16;
+}
+.work-title {
+  @apply text-primary mx-8;
+}
+.work-keypoints-list {
+  @apply mx-12;
+}
+.work-keypoint {
+  @apply list-disc list-inside text-txt-base;
+}
+.work-ex {
+  @apply mx-auto my-4;
+  width: 75vw;
+  height: 75vw;
+}
+.work-btn {
+  @apply mt-4 mx-auto table;
+}
+
+@media only screen and (min-width: 700px) {
+  .work-container {
+    @apply relative w-1/2 flex flex-col justify-items-center items-center;
+    min-height: 336px;
+  }
+  .work-ex {
+    @apply absolute -right-full top-0 h-full w-full;
+  }
+}
 /* FOOTER */
 .footer-nav {
   @apply max-w-4xl;
