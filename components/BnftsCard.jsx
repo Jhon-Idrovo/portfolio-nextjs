@@ -5,7 +5,7 @@ function BnftsCard({ benefit, index, CTA, children }) {
     <div
       className="bnft-container"
       data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-      data-aos-anchor-placement="bottom-bottom"
+      data-aos-anchor-placement="center-bottom"
     >
       <h4 className="bnft-title">{benefit.title}</h4>
       <p className="bnft-text">{benefit.desc}</p>

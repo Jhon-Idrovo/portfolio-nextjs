@@ -6,7 +6,7 @@ function WorkCard({ work, index, CTA }) {
     <div
       className="work-container"
       data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-      data-aos-anchor-placement="bottom-bottom"
+      data-aos-anchor-placement="center-bottom"
     >
       <h6 className="work-title">{work.title}</h6>
 
@@ -23,8 +23,10 @@ function WorkCard({ work, index, CTA }) {
           objectFit="scale-down"
         />
       </div>
-      <Link href="">
-        <a className="CTA work-btn">{CTA}</a>
+      <Link href={work.href}>
+        <a className="CTA work-btn" target="_blank">
+          {CTA}
+        </a>
       </Link>
     </div>
   );
