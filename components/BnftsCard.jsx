@@ -2,7 +2,11 @@ import Image from "next/image";
 
 function BnftsCard({ benefit, index, CTA, children }) {
   return (
-    <div className="bnft-container">
+    <div
+      className="bnft-container"
+      data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+      data-aos-anchor-placement="bottom-bottom"
+    >
       <h4 className="bnft-title">{benefit.title}</h4>
       <p className="bnft-text">{benefit.desc}</p>
       {benefit.exSrc ? (

@@ -9,6 +9,7 @@ import Card from "../components/Card";
 import BnftsCard from "../components/BnftsCard";
 import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
+import ServiceCard from "../components/ServiceCard";
 
 export default function Home() {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function Home() {
           <BnftsCard
             benefit={benefit}
             key={index}
-            i={index}
+            index={index}
             CTA={texts.contactMe}
           />
         ))}
@@ -131,20 +132,22 @@ export default function Home() {
           {texts.viewAllMyWork}
         </button>
       </section>
-      <section className="section" id="benefits">
+      <section className="section services-section" id="benefits">
         <h1 className="text-txt-base mx-auto w-min">
           {texts.navMenuItems[2].text}
         </h1>
-        {texts.services.map((service, index) => (
-          <BnftsCard
-            benefit={service}
-            CTA={texts.contactMe}
-            index={index}
-            key={index}
-          >
-            {service.node}
-          </BnftsCard>
-        ))}
+        <div className="services">
+          {texts.services.map((service, index) => (
+            <ServiceCard
+              benefit={service}
+              CTA={texts.contactMe}
+              index={index}
+              key={index}
+            >
+              {service.node}
+            </ServiceCard>
+          ))}
+        </div>
       </section>
       <section className="section" id="faq">
         <h1 className="text-txt-base mx-auto w-min">FAQ</h1>
