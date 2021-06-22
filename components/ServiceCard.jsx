@@ -10,7 +10,9 @@ function ServiceCard({ benefit, index, CTA, children }) {
       <h6 className="service-title">{benefit.title}</h6>
       <p className="service-text">{benefit.desc}</p>
       {children}
-      <button className="CTA service-btn">{CTA}</button>
+      <button className="CTA service-btn" onClick={CTA.action}>
+        {CTA.t}
+      </button>
     </div>
   );
 }

@@ -11,13 +11,20 @@ import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
 import ServiceCard from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const texts = locale === "en" ? en : es;
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const openContact = () => {
+    setIsContactOpen(true);
+  };
+
   return (
     <>
+      {isContactOpen ? <Contact close={() => setIsContactOpen(false)} /> : null}
       <Head>
         <title>B.E.</title>
       </Head>
@@ -39,7 +46,9 @@ export default function Home() {
           <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
             {texts.indexHeroSubheader}
           </p>
-          <button className="CTA hero-btn">{texts.contactMe}</button>
+          <button className="CTA hero-btn" onClick={openContact}>
+            {texts.contactMe}
+          </button>
         </div>
       </section>
       <section className="section bnfts-section" id="benefits">
@@ -50,7 +59,7 @@ export default function Home() {
             benefit={benefit}
             key={index}
             index={index}
-            CTA={texts.contactMe}
+            CTA={{ t: texts.contactMe, action: openContact }}
           />
         ))}
       </section>
@@ -70,7 +79,7 @@ export default function Home() {
           {texts.services.map((service, index) => (
             <ServiceCard
               benefit={service}
-              CTA={texts.contactMe}
+              CTA={{ t: texts.contactMe, action: openContact }}
               index={index}
               key={index}
             >

@@ -1,9 +1,15 @@
 import Link from "next/link";
 
-function Contact() {
+function Contact({ close }) {
   return (
-    <div className="fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center">
-      <div className="bg-secondary flex flex-col justify-center items-center p-8">
+    <div className="contact-base">
+      <div className="relative bg-secondary flex flex-col justify-center items-center p-8">
+        <button
+          className="text-txt-secondary text-xl absolute top-0 right-2"
+          onClick={close}
+        >
+          x
+        </button>
         <h2 className="text-txt-base mb-4">Contact</h2>
         <div className="contact-item">
           <svg

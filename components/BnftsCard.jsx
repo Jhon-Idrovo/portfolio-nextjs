@@ -20,7 +20,9 @@ function BnftsCard({ benefit, index, CTA, children }) {
         </div>
       ) : null}
       {children}
-      <button className="CTA bnft-btn">{CTA}</button>
+      <button className="CTA bnft-btn" onClick={CTA.action}>
+        {CTA.t}
+      </button>
     </div>
   );
 }
