@@ -8,7 +8,7 @@ function Footer() {
   const { locale } = router;
   const texts = locale === "en" ? en : es;
   return (
-    <footer className="bg-primary fixed bottom-0 right-0 left-0">
+    <footer className="w-screen bg-primary fixed bottom-0 right-0 left-0">
       <nav className="footer-nav">
         <ul className="mx-auto flex">
           <li className="footer-item">
