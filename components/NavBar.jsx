@@ -92,6 +92,7 @@ function NavBar() {
           type="checkbox"
           value={isNavOpen}
           onChange={() => setIsNavOpen((prev) => !prev)}
+          checked={isNavOpen}
           id="menu-check"
         />
         <div></div>

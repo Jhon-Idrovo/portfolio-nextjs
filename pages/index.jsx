@@ -21,7 +21,7 @@ export default function Home() {
       <Head>
         <title>B.E.</title>
       </Head>
-      <section className="hero ">
+      <section className="hero " id="home">
         <div className="hero-img ">
           <Image
             src="/images/me-square.png"
@@ -42,7 +42,7 @@ export default function Home() {
           <button className="CTA hero-btn">{texts.contactMe}</button>
         </div>
       </section>
-      <section className="section bnfts-section">
+      <section className="section bnfts-section" id="benefits">
         <h1 className="text-txt-base text-center mb-4">{texts.whyHireMe}</h1>
 
         {texts.benefits.map((benefit, index) => (
@@ -54,7 +54,7 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className="section">
+      <section className="section" id="portfolio">
         <h1 className="text-txt-base text-center mb-4">{texts.myWork}</h1>
         <div className="works">
           {texts.works.map((w, i) => (
@@ -62,7 +62,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="section services-section" id="benefits">
+      <section className="section services-section" id="services">
         <h1 className="text-txt-base mx-auto w-min">
           {texts.navMenuItems[2].text}
         </h1>

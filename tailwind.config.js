@@ -10,7 +10,8 @@ module.exports = {
       "txt-base": colors.white,
       primary: colors.lime[400],
       "txt-primary": colors.black,
-      secondary: colors.yellow[900],
+      secondary: colors.warmGray[700],
+
       "txt-secondary": colors.white,
     },
     extend: {},

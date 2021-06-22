@@ -20,7 +20,8 @@ body {
   outline: none;
 }
 /* To avoid overflow due to AOS */
-html {
+html,
+body {
   @apply w-screen overflow-x-hidden;
 }
 
@@ -129,7 +130,9 @@ html {
 .nav-menu-item {
   @apply w-max m-4 font-medium text-2xl hover:border-opacity-100 border-opacity-0 border-txt-base border-solid border-b-2;
 }
-
+.nav-menu-item.active {
+  @apply border-opacity-100;
+}
 /* NAV RESPONSIVE  */
 @media only screen and (min-width: 750px) {
   #menu-check {
@@ -410,4 +413,17 @@ h6 {
 
 .faq-active {
   transform: rotate(180deg);
+}
+
+/* CONTACT */
+.contact-item {
+  @apply flex justify-center mb-2 w-full;
+}
+
+.contact-item a {
+  @apply ml-2 w-max;
+}
+
+.contact-item svg {
+  @apply text-txt-secondary fill-current w-8 h-8;
 }
