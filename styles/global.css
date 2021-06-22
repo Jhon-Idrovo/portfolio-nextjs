@@ -242,12 +242,26 @@ h6 {
 .hero-btn {
   @apply w-max self-center mt-10 z-10;
 }
-
-@media only screen and (min-width: 635px) {
+@media only screen and (min-width: 500px) {
+  .hero {
+    min-height: 400px;
+  }
   .hero-header {
     margin-top: 15%;
   }
+  /* the img container needs to be positioned */
+  .hero-img {
+    @apply relative left-0 bottom-0 w-3/4 overflow-hidden;
+    transform: translateX(3rem);
+  }
+  .hero-content {
+    @apply absolute block top-0 left-0;
+  }
+  .hero-btn {
+    @apply w-max self-start mt-10 z-10;
+  }
 }
+
 @media only screen and (min-width: 850px) {
   .hero {
     @apply mx-auto w-3/4;
@@ -263,26 +277,6 @@ h6 {
   }
   .hero-header {
     margin-top: 10%;
-  }
-}
-@media only screen and (min-width: 500px) {
-  .hero {
-    @apply mx-4 mb-24 relative flex flex-col justify-end items-end overflow-hidden;
-    min-height: max-content;
-  }
-  .hero-header {
-    @apply mt-8;
-    text-shadow: 4px 2px 8px black;
-  }
-  .hero-img {
-    @apply w-3/4 overflow-hidden;
-    transform: translateX(3rem);
-  }
-  .hero-content {
-    @apply absolute top-0 left-0;
-  }
-  .hero-btn {
-    @apply w-max self-start mt-10 z-10;
   }
 }
 /* BENEFITS */
