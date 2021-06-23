@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { es, en } from "../lib/texts";
 
 function Contact({ close }) {
+  const router = useRouter()
+  const texts = router.locale==='es'?es:en;
   return (
     <div className="contact-base">
       <div className="relative bg-secondary flex flex-col justify-center items-center p-8">
@@ -10,7 +15,7 @@ function Contact({ close }) {
         >
           x
         </button>
-        <h2 className="text-txt-base mb-4">Contact</h2>
+        <h2 className="text-txt-base mb-4">{texts.contact}</h2>
         <div className="contact-item">
           <svg
             id="email-icon"
@@ -29,7 +34,7 @@ function Contact({ close }) {
             </g>
           </svg>
           <Link href="mailto: jhonidrovo3@gmail.com">
-            <a className=" CTA">Send Email</a>
+            <a className=" CTA">{texts.sendEmail}</a>
           </Link>
         </div>
         <div className="contact-item">
@@ -52,7 +57,7 @@ function Contact({ close }) {
             </g>
           </svg>
           <Link href="tel:+593-0961301416">
-            <a className="CTA">Make a Call</a>
+            <a className="CTA">{texts.call}</a>
           </Link>
         </div>
         {/* <Link href="">

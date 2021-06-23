@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { es, en } from "../lib/texts";
 
-function Footer() {
+function Footer({openContact}) {
   const router = useRouter();
   const { locale } = router;
   const texts = locale === "en" ? en : es;
@@ -23,7 +23,7 @@ function Footer() {
           </li>
           <li className="footer-item">
             <Link href="/#contact">
-              <a>{texts.footerNavIndex2}</a>
+              <a onClick={openContact}>{texts.footerNavIndex2}</a>
             </Link>
           </li>
         </ul>

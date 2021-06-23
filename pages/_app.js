@@ -1,15 +1,19 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 
 import "../styles/global.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Contact from '../components/Contact'
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init();
   }, []);
+  const [isContactOpen, setIsContactOpen] = useState(false)
+  const openContact = ()=>setIsContactOpen(true)
+  const closeContact =()=>setIsContactOpen(false)
   return (
     <>
       <Head>
@@ -32,8 +36,9 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <NavBar />
-      <Component {...pageProps} />
-      <Footer />
+      <Component openContact={openContact} {...pageProps} />
+      {isContactOpen?<Contact close={closeContact}/>:null}
+      <Footer openContact={openContact}/>
     </>
   );
 }
