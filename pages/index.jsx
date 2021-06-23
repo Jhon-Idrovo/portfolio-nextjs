@@ -37,7 +37,11 @@ export default function Home() {
             width="9"
             height="9"
             quality="100"
+
+            //to preload image
             priority={true}
+            //since the image does not cover the whole viewport
+            sizes={'(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080) 609px, (max-width:1200px) 679px, 859px'}
           />
         </div>
         <div className="hero-content">
