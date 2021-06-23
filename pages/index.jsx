@@ -26,7 +26,7 @@ export default function Home() {
     <>
       {isContactOpen ? <Contact close={() => setIsContactOpen(false)} /> : null}
       <Head>
-        <title>B.E.</title>
+        <title>Jhon Idrovo: Freelance Web Developer|Hire a web developer</title>
       </Head>
       <section className="hero " id="home">
         <div className="hero-img ">
@@ -37,6 +37,7 @@ export default function Home() {
             width="9"
             height="9"
             quality="100"
+            priority={true}
           />
         </div>
         <div className="hero-content">

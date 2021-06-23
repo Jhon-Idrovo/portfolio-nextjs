@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Web developer that will build your website to fit your needs. All the functionality you need. No templates."
         />
 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
