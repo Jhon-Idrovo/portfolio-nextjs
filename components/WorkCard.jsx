@@ -21,6 +21,7 @@ function WorkCard({ work, index, CTA }) {
           alt="Website snapshot"
           layout="fill"
           objectFit="scale-down"
+          priority={true}
         />
       </div>
       <Link href={work.href}>

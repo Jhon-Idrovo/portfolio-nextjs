@@ -15,6 +15,8 @@ function BnftsCard({ benefit, index, CTA, children }) {
             src={benefit.exSrc}
             alt={"ers"}
             layout="fill"
+            // preload the image
+            priority={true}
             objectFit="scale-down"
           />
         </div>

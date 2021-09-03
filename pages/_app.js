@@ -5,15 +5,15 @@ import AOS from "aos";
 import "../styles/global.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Contact from '../components/Contact'
+import Contact from "../components/Contact";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init();
   }, []);
-  const [isContactOpen, setIsContactOpen] = useState(false)
-  const openContact = ()=>setIsContactOpen(true)
-  const closeContact =()=>setIsContactOpen(false)
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const openContact = () => setIsContactOpen(true);
+  const closeContact = () => setIsContactOpen(false);
   return (
     <>
       <Head>
@@ -30,15 +30,18 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
         {/* Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <NavBar />
       <Component openContact={openContact} {...pageProps} />
-      {isContactOpen?<Contact close={closeContact}/>:null}
-      <Footer openContact={openContact}/>
+      {isContactOpen ? <Contact close={closeContact} /> : null}
+      <Footer openContact={openContact} />
     </>
   );
 }
