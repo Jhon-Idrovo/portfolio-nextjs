@@ -127,7 +127,7 @@ body {
   transform: translateX(100%);
 }
 .nav-menu-item {
-  @apply w-max m-4 font-medium text-2xl hover:border-opacity-100 border-opacity-0 border-txt-base border-solid border-b-2;
+  @apply rounded-md w-max m-4 font-medium text-2xl hover:border-opacity-100 border-opacity-0 border-txt-base border-solid border-b-2;
 }
 .nav-menu-item.active {
   @apply border-opacity-100;
@@ -153,7 +153,7 @@ body {
     @apply bg-primary text-txt-primary;
   }
   .nav-menu-item.active {
-    @apply bg-primary text-txt-primary;
+    @apply bg-primary text-txt-primary rounded-md;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -193,7 +193,7 @@ h6 {
   @apply font-semibold text-xl;
 }
 .CTA {
-  @apply cursor-pointer py-1 px-2 border-txt-primary hover:skew-x-3 bg-primary text-txt-primary;
+  @apply cursor-pointer py-1 px-2 rounded-md border-primary border-2 hover:bg-base hover:text-txt-base bg-primary text-txt-primary;
 }
 .slide-img {
   height: 300px;
@@ -290,7 +290,7 @@ h6 {
   height: 67vw;
 }
 .bnft-text {
-  @apply max-w-lg mx-auto mt-2 border-2 border-primary text-txt-base p-2 text-center justify-center;
+  @apply rounded-md max-w-lg mx-auto mt-2 border-2 border-primary text-txt-base p-2 text-center justify-center;
 }
 .bnft-btn {
   @apply mt-4 table m-auto;
@@ -324,6 +324,38 @@ h6 {
     height: 90vh;
   }
 }
+/* TECH STACK */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+.tech-stack > div {
+  @apply m-2;
+}
+.technology {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15% 30%;
+  position: relative;
+}
+.technology > span {
+  @apply max-h-0 w-full bg-base text-txt-base  overflow-hidden absolute -bottom-6 text-center;
+  border-color: currentColor;
+  z-index: 99;
+}
+.technology:hover > span {
+  @apply max-h-8 border-2 border-t-0;
+}
+.technology > svg,
+.technology > i {
+  width: 100%;
+  height: 100%;
+}
 /* SERVICES */
 .services-section {
 }
@@ -334,7 +366,7 @@ h6 {
   @apply text-center justify-items-center text-primary w-2/3 mx-auto;
 }
 .service-text {
-  @apply max-w-lg mx-auto mt-2 border-2 border-primary text-txt-base p-2 text-center justify-center;
+  @apply rounded-md max-w-lg mx-auto mt-2 border-2 border-primary text-txt-base p-2 text-center justify-center;
 }
 .service-btn {
   @apply mt-4 table m-auto;

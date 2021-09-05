@@ -1,4 +1,3 @@
-const { warmGray } = require("tailwindcss/colors");
 const colors = require("tailwindcss/colors");
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -6,13 +5,14 @@ module.exports = {
   theme: {
     colors: {
       base: colors.black,
-      "base-ligth": warmGray[600],
+      "base-ligth": colors.warmGray[600],
       "txt-base": colors.white,
-      primary: colors.lime[400],
-      "txt-primary": colors.black,
+      primary: colors.green[600],
+      "txt-primary": colors.white,
       secondary: colors.warmGray[700],
 
       "txt-secondary": colors.white,
+      white: colors.white,
     },
     extend: {},
   },
