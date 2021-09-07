@@ -1,7 +1,19 @@
+import { useRouter } from "next/router";
+import { en, es } from "../lib/texts";
 function About() {
+  const router = useRouter();
+  const { locale } = router;
+  const texts = locale === "en" ? en : es;
   return (
     <div className="text-txt-base">
       <h1 className="mx-auto w-min whitespace-nowrap">Know Me</h1>
+      <span className="fixed left-0 w-1/6">
+        <ul className="flex flex-col">
+          <li className="m-2">
+            {texts.about.sections.map((section) => section.title)}
+          </li>
+        </ul>
+      </span>
       <p className="max-w-lg mx-auto">
         Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to help
         you with my capabilities.
@@ -23,9 +35,10 @@ function About() {
         and Business Administration. Knowledge that now combine with
         programming. This brings me a different point of view when facing
         problems in eaither of those areas.
+        <br />
+        Now, I'm workning through freelance, and try to meet like minded people.
+        But also I'm planning to join/create a startup in the future.
       </p>
-      Now, I'm workning through freelance, and try to meet more like minded
-      people. But also I'm planning to join/create a startup in the future.
     </div>
   );
 }
