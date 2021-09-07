@@ -411,7 +411,6 @@ h6 {
   height: 75vw;
 }
 .work-btn {
-  @apply mt-4 mx-auto table;
 }
 
 @media only screen and (min-width: 700px) {
@@ -462,4 +461,23 @@ h6 {
 
 .contact-item svg {
   @apply text-txt-secondary fill-current w-8 h-8;
+}
+
+/* ABOUT */
+.books-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.book-item {
+  @apply p-2 bg-secondary text-txt-secondary flex flex-col transition-all;
+}
+.book-item > h6 {
+  @apply max-h-0 overflow-hidden;
+}
+.book-item:hover {
+  transform: scale(125%, 125%);
+}
+.book-item:hover > h6 {
+  @apply max-h-10;
 }

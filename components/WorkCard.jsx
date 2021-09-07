@@ -24,11 +24,18 @@ function WorkCard({ work, index, CTA }) {
           priority={true}
         />
       </div>
-      <Link href={work.href}>
-        <a className="CTA work-btn" target="_blank">
-          {CTA}
-        </a>
-      </Link>
+      <div className="mx-auto mt-4">
+        <Link href={work.href}>
+          <a className="CTA work-btn" target="_blank">
+            {CTA}
+          </a>
+        </Link>
+        <Link href={work.caseStudyRef}>
+          <a className="CTA work-btn ml-4" target="_blank">
+            Case Study
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }
