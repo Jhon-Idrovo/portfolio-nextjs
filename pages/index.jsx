@@ -90,12 +90,13 @@ export default function Home({ openContact }) {
                 <g>
                   <path
                     d="M79.2,31l35.1,397.6L271.6,481l158.3-52.4L464.9,31L79.2,31z M388.8,159.5H204.2l4.1,49.6h176.4L371,358.2l-98.3,27.1v0.3
-			h-1.1l-99.1-27.4l-6-76.1h47.9l3.5,38.3l53.7,14.6l53.9-14.6l6-62.5H163.9L151,111.6h242.2L388.8,159.5z"
+                    h-1.1l-99.1-27.4l-6-76.1h47.9l3.5,38.3l53.7,14.6l53.9-14.6l6-62.5H163.9L151,111.6h242.2L388.8,159.5z"
                     fill="#FFFFFF"
                   />
                 </g>
               </g>
             </svg>
+            <span style={{ borderColor: "#EF662A" }}>HTML5</span>
           </div>
           <div
             className="technology"
@@ -118,7 +119,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               />
             </svg>
-            <span>HTML5</span>
+            <span style={{ borderColor: "#2965f1" }}>CSS</span>
           </div>
           <div
             className="technology"
@@ -149,6 +150,8 @@ export default function Home({ openContact }) {
                 ></path>
               </g>
             </svg>
+
+            <span style={{ borderColor: "#f0db4f" }}>JavaScript</span>
           </div>
           <div
             className="technology"
@@ -178,6 +181,7 @@ export default function Home({ openContact }) {
                 fill="#53C1DE"
               ></path>
             </svg>
+            <span style={{ borderColor: "#53C1DE" }}>React</span>
           </div>
           {/* nextjs */}
           <div
@@ -194,6 +198,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               ></path>
             </svg>
+            <span style={{ borderColor: "gray" }}>Next.js</span>
           </div>
           {/* Tailwind */}
           <div
@@ -215,6 +220,7 @@ export default function Home({ openContact }) {
                 ></path>
               </g>
             </svg>
+            <span style={{ borderColor: "#06B6D4" }}>Tailwind</span>
           </div>
           {/* Typescript */}
           <div
@@ -246,6 +252,7 @@ export default function Home({ openContact }) {
                 ></path>
               </g>
             </svg>
+            <span style={{ borderColor: "#007ACC" }}>Typescript</span>
           </div>
           {/* Nodejs */}
           <div
@@ -266,6 +273,7 @@ export default function Home({ openContact }) {
                 ></path>
               </g>
             </svg>
+            <span style={{ borderColor: "#539E43" }}>Node.js</span>
           </div>
           {/* Expressjs */}
           <div
@@ -366,6 +374,7 @@ export default function Home({ openContact }) {
                 />
               </g>
             </svg>
+            <span style={{ borderColor: "#666666" }}>Express.js</span>
           </div>
           {/* Stripe */}
           <div
@@ -396,6 +405,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               />
             </svg>
+            <span style={{ borderColor: "#4379FF" }}>Stripe</span>
           </div>
           <div
             className="technology"
@@ -415,6 +425,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               />
             </svg>
+            <span style={{ borderColor: "#0079C1" }}>PayPal</span>
           </div>
           <div
             className="technology"
@@ -426,6 +437,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               />
             </svg>
+            <span style={{ borderColor: "#DE4C36" }}>Git</span>
           </div>
           <div
             className="technology"
@@ -451,6 +463,7 @@ export default function Home({ openContact }) {
                 fill="currentColor"
               />
             </svg>
+            <span style={{ borderColor: "gray" }}>GitHub</span>
           </div>
           <div
             className="technology"
@@ -478,6 +491,7 @@ export default function Home({ openContact }) {
                 </g>
               </g>
             </svg>
+            <span style={{ borderColor: "#fca614" }}>Firebase's Firestore</span>
           </div>
           <div
             className="technology"
@@ -524,6 +538,7 @@ export default function Home({ openContact }) {
                 />
               </g>
             </svg>
+            <span style={{ borderColor: "#499D4A" }}>MongoDB</span>
           </div>
         </div>
       </section>

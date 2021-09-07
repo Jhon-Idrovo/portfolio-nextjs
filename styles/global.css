@@ -326,6 +326,7 @@ h6 {
 }
 /* TECH STACK */
 .tech-stack {
+  margin: 0 5%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
@@ -335,6 +336,7 @@ h6 {
   @apply m-2;
 }
 .technology {
+  @apply transition-all;
   width: 100%;
   height: 100%;
   display: flex;
@@ -345,8 +347,12 @@ h6 {
 }
 .technology > span {
   @apply max-h-0 w-full bg-base text-txt-base  overflow-hidden absolute -bottom-6 text-center;
-  border-color: currentColor;
   z-index: 99;
+  font-family: inherit;
+}
+.technology:hover {
+  transform: scale(125%, 125%);
+  z-index: 999;
 }
 .technology:hover > span {
   @apply max-h-8 border-2 border-t-0;
