@@ -6,7 +6,7 @@ import "../styles/global.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
-
+import MobileFooter from "../components/MobileFooter";
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init();
@@ -36,12 +36,21 @@ export default function App({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
           rel="stylesheet"
         ></link>
+        {/* Fonts Awesome */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
       </Head>
 
       <NavBar />
       <Component openContact={openContact} {...pageProps} />
       {isContactOpen ? <Contact close={closeContact} /> : null}
-      <Footer openContact={openContact} />
+      <Footer></Footer>
+      <MobileFooter openContact={openContact} />
     </>
   );
 }

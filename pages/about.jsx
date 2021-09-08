@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { en, es } from "../lib/texts";
 import Image from "next/image";
 import Book from "../components/Book";
+import Link from "next/link";
 function About() {
   const router = useRouter();
   const { locale } = router;
@@ -10,35 +11,38 @@ function About() {
   const texts = en.about;
   const [scrollPercent, setScrollPercent] = useState(0);
   useEffect(() => {
+    let height = 0;
+    Object.values(texts.sections).map(({ title }) => {
+      let listItem = document.getElementById(`${title}-indicator`);
+      console.log(listItem, height);
+      console.log(document.getElementById(encodeURI(title)));
+      const scrollDistance =
+        (height /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
+      // since ul element has a width of 0, left has no effect until we give it a width
+      listItem.setAttribute(
+        "style",
+        `top:${scrollDistance}%; left:${scrollDistance}%`
+      );
+      // add the heigth of the section, this way we get the start of the next section
+      height = height + document.getElementById(encodeURI(title)).scrollHeight;
+    });
     const handleScroll = (e) => {
-      const scrollable =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollable = height;
       const scrolled = (window.scrollY / scrollable) * 100;
       // console.log(scrollable, scrolled);
       setScrollPercent(scrolled);
     };
     window.addEventListener("scroll", handleScroll);
-    let height = 0;
-    Object.values(texts.sections).map(({ title }) => {
-      let listItem = document.getElementById(`${title}-indicator`);
-      console.log(listItem, height);
-      console.log(document.getElementById(title));
-      const scrollDistance =
-        (height /
-          (document.documentElement.scrollHeight - window.innerHeight)) *
-        100;
-      listItem.setAttribute("style", `top:${scrollDistance}%`);
-      // add the heigth of the section, this way we get the start of the next section
-      height = height + document.getElementById(title).scrollHeight;
-    });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
-    <div className="text-txt-base max-w-5xl mx-auto mt-12">
-      <div className="fixed left-0 flex ">
-        <div className="ml-8 mr-2 " style={{ height: "75vh", width: "20px" }}>
+    <div className="about">
+      <div className="about-sidebar">
+        <div className="sidebar-scroll">
           <div
             className="scroll-inner bg-primary w-full rounded-md"
             style={{ height: `${scrollPercent}%` }}
@@ -51,17 +55,25 @@ function About() {
               className="absolute text-primary-accent"
               id={`${section.title}-indicator`}
             >
-              {section.title}
+              <Link href={`/about/#${encodeURI(section.title)}`}>
+                <a>{section.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
       {/* Intro */}
-      <section className=" flex section" id={texts.sections.knowMe.title}>
-        <div className="w-1/2">
+      <section
+        className=" flex section"
+        id={encodeURI(texts.sections.knowMe.title)}
+      >
+        <div className="">
           <h1 className="section-header">Know Me</h1>
 
-          <p className=" mx-auto">
+          <div className="about-image ">
+            <Image src="/images/me2.png" layout="fill" objectFit="contain" />
+          </div>
+          <p className=" mx-auto text-justify">
             Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to
             help you with my capabilities.
             <br />
@@ -90,13 +102,10 @@ function About() {
             future.
           </p>
         </div>
-        <div className="relative w-1/2">
-          <Image src="/images/me2.png" layout="fill" objectFit="contain" />
-        </div>
       </section>
       <section
         className="schooling mt-12 section"
-        id={texts.sections.schooling.title}
+        id={encodeURI(texts.sections.schooling.title)}
       >
         <h1 className=" section-header">{texts.sections.schooling.title}</h1>
         <h2>{texts.sections.schooling.content.books.tittle}</h2>
@@ -116,12 +125,15 @@ function About() {
           ))}
         </div>
       </section>
-      <section id={texts.sections.strengths.title} className="section">
+      <section
+        id={encodeURI(texts.sections.strengths.title)}
+        className="section"
+      >
         <h1 className="section-header">{texts.sections.strengths.title}</h1>
         <h2>{texts.sections.strengths.content.strengths.title}</h2>
         {texts.sections.strengths.content.strengths.strengthsList.map(
           ({ title, description }) => (
-            <div className="strenghts">
+            <div key={title} className="strenghts">
               <h4>{title}</h4>
               <p>{description}</p>
             </div>
@@ -130,7 +142,7 @@ function About() {
         <h2>{texts.sections.strengths.content.weaknesses.tittle}</h2>
         {texts.sections.strengths.content.weaknesses.weaknessesList.map(
           ({ tittle, description }) => (
-            <div className="strenghts">
+            <div key={tittle} className="strenghts">
               <h4>{tittle}</h4>
               <p>{description}</p>
             </div>

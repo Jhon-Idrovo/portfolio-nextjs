@@ -2,20 +2,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { es, en } from "../lib/texts";
+import SocialIcons from "./SocialIcons";
 
 function Contact({ close }) {
-  const router = useRouter()
-  const texts = router.locale==='es'?es:en;
+  const router = useRouter();
+  const texts = router.locale === "es" ? es : en;
   return (
     <div className="contact-base">
-      <div className="relative bg-secondary flex flex-col justify-center items-center p-8">
+      <div className="relative bg-primary flex flex-col justify-center items-center p-8">
         <button
-          className="text-txt-secondary text-xl absolute top-0 right-2"
+          className="text-txt-primary text-xl absolute top-0 right-2"
           onClick={close}
         >
           x
         </button>
-        <h2 className="text-txt-base mb-4">{texts.contact}</h2>
+        <h2 className="text-txt-primary mb-4">{texts.contact}</h2>
         <div className="contact-item">
           <svg
             id="email-icon"
@@ -63,6 +64,7 @@ function Contact({ close }) {
         {/* <Link href="">
         <a>Reach on Twitter</a>
 </Link> */}
+        <SocialIcons />
       </div>
     </div>
   );

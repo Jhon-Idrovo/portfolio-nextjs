@@ -179,6 +179,9 @@ body {
 .section {
   @apply mx-4 my-24;
 }
+p br {
+  @apply my-4;
+}
 .section-header {
   @apply mx-auto w-min whitespace-nowrap mb-4;
 }
@@ -206,6 +209,9 @@ h6 {
 }
 .CTA {
   @apply cursor-pointer py-1 px-2 rounded-md border-secondary-accent border-2 hover:bg-base hover:text-txt-base bg-secondary-accent text-txt-secondary-accent;
+}
+.CTA-secondary {
+  @apply cursor-pointer py-1 px-2 rounded-md border-primary-accent border-2 hover:bg-primary hover:text-txt-primary-accent bg-primary-accent text-txt-secondary-accent;
 }
 .slide-img {
   height: 300px;
@@ -434,7 +440,7 @@ h6 {
     @apply absolute -right-full top-0 h-full w-full;
   }
 }
-/* FOOTER */
+/* MOBILE FOOTER */
 .footer-nav {
   @apply overflow-hidden;
 }
@@ -459,7 +465,7 @@ h6 {
 
 /* CONTACT */
 .contact-base {
-  @apply fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-base;
+  @apply fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center;
   background-color: rgba(0, 0, 0, 0.603);
   z-index: 999999;
 }
@@ -476,6 +482,24 @@ h6 {
 }
 
 /* ABOUT */
+.about {
+  @apply text-txt-base max-w-5xl mx-auto mt-12;
+}
+.about-sidebar {
+  @apply fixed left-0 flex;
+}
+.sidebar-scroll {
+  @apply ml-8 mr-2;
+  height: 75vh;
+  width: 20px;
+}
+.scroll-inner {
+}
+.about-image {
+  @apply float-right relative;
+  width: 400px;
+  height: 600px;
+}
 .books-list {
   display: grid;
   gap: 1rem;
@@ -495,4 +519,45 @@ h6 {
 }
 .strenghts > h4 {
   @apply mb-4 mt-8 text-primary;
+}
+
+@media only screen and (max-width: 650px) {
+  .about-image {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about-image {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .about-sidebar {
+    display: none;
+  }
+}
+
+/* FOOTER */
+.main-footer {
+  @apply bg-primary  bottom-0 w-screen hidden;
+  height: fit-content;
+  z-index: 999;
+}
+.social-icon {
+  @apply text-txt-primary w-10 h-10 text-center text-4xl;
+}
+.social-icon i {
+  @apply w-full h-full;
+}
+.social-icons-container {
+  @apply flex justify-between items-center w-max mx-auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .main-footer {
+    @apply bottom-10 block;
+  }
+  .social-icons-container {
+  }
 }
