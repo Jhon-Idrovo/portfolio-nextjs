@@ -27,12 +27,11 @@ function FAQ({ q, a }) {
         </svg>
       </div>
       <p
-        className={`text-txt-base text-center border-primary border-0 overflow-hidden transition-all ${
-          isOpen ? "max-h-screen border-2 p-2" : "max-h-0"
+        className={`text-txt-base text-left border-primary overflow-hidden transition-all ${
+          isOpen ? "max-h-screen border-2 border-t-0 p-2" : "max-h-0"
         } `}
-      >
-        {a}
-      </p>
+        dangerouslySetInnerHTML={{ __html: a }}
+      ></p>
     </div>
   );
 }

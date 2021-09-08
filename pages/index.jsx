@@ -559,12 +559,12 @@ export default function Home({ openContact }) {
           ))}
         </div>
       </section>
-      {/* <section className="section" id="faq">
+      <section className="section" id="faq">
         <h1 className="text-txt-base mx-auto w-min">FAQ</h1>
         {texts.faq.map((el) => (
           <FAQ {...el} />
         ))}
-      </section> */}
+      </section>
     </>
   );
 }
