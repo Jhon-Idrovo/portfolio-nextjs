@@ -85,7 +85,7 @@ function About() {
         <p className="mt-6">
           {texts.sections.schooling.content.books.description}
         </p>
-        <div className="quote mt-6">
+        <div className="quote mt-6 mb-12 w-2/3 mx-auto">
           <em className="">
             {texts.sections.schooling.content.books.quote.text}
           </em>

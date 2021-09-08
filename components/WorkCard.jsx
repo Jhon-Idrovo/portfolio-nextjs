@@ -24,7 +24,7 @@ function WorkCard({ work, index, CTA }) {
           priority={true}
         />
       </div>
-      <div className="mx-auto mt-4">
+      <div className="mx-auto mt-4 w-min whitespace-nowrap">
         <Link href={work.href}>
           <a className="CTA work-btn" target="_blank">
             {CTA}
