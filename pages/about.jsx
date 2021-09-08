@@ -14,35 +14,52 @@ function About() {
       const scrollable =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (window.scrollY / scrollable) * 100;
-      console.log(scrollable, scrolled);
+      // console.log(scrollable, scrolled);
       setScrollPercent(scrolled);
     };
     window.addEventListener("scroll", handleScroll);
+    let height = 0;
+    Object.values(texts.sections).map(({ title }) => {
+      let listItem = document.getElementById(`${title}-indicator`);
+      console.log(listItem, height);
+      console.log(document.getElementById(title));
+      const scrollDistance =
+        (height /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+        100;
+      listItem.setAttribute("style", `top:${scrollDistance}%`);
+      // add the heigth of the section, this way we get the start of the next section
+      height = height + document.getElementById(title).scrollHeight;
+    });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
     <div className="text-txt-base max-w-5xl mx-auto mt-12">
-      <div className="fixed left-0 w-1/6 flex ">
-        <div className="ml-8 mr-2" style={{ height: "75vh", width: "20px" }}>
+      <div className="fixed left-0 flex ">
+        <div className="ml-8 mr-2 " style={{ height: "75vh", width: "20px" }}>
           <div
-            className="scroll-inner bg-primary w-full"
+            className="scroll-inner bg-primary w-full rounded-md"
             style={{ height: `${scrollPercent}%` }}
           ></div>
         </div>
-        <ul className="flex flex-col justify-between">
+        <ul className="flex flex-col justify-between relative">
           {Object.values(texts.sections).map((section) => (
-            <li key={section.title} className="">
+            <li
+              key={section.title}
+              className="absolute text-primary-accent"
+              id={`${section.title}-indicator`}
+            >
               {section.title}
             </li>
           ))}
         </ul>
       </div>
       {/* Intro */}
-      <section className=" flex">
+      <section className=" flex section" id={texts.sections.knowMe.title}>
         <div className="w-1/2">
-          <h1 className="mx-auto w-min whitespace-nowrap">Know Me</h1>
+          <h1 className="section-header">Know Me</h1>
 
           <p className=" mx-auto">
             Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to
@@ -77,10 +94,11 @@ function About() {
           <Image src="/images/me2.png" layout="fill" objectFit="contain" />
         </div>
       </section>
-      <section className="schooling mt-12">
-        <h1 className="mx-auto w-min whitespace-nowrap">
-          {texts.sections.schooling.title}
-        </h1>
+      <section
+        className="schooling mt-12 section"
+        id={texts.sections.schooling.title}
+      >
+        <h1 className=" section-header">{texts.sections.schooling.title}</h1>
         <h2>{texts.sections.schooling.content.books.tittle}</h2>
         <p className="mt-6">
           {texts.sections.schooling.content.books.description}
@@ -97,6 +115,27 @@ function About() {
             <Book {...book} />
           ))}
         </div>
+      </section>
+      <section id={texts.sections.strengths.title} className="section">
+        <h1 className="section-header">{texts.sections.strengths.title}</h1>
+        <h2>{texts.sections.strengths.content.strengths.title}</h2>
+        {texts.sections.strengths.content.strengths.strengthsList.map(
+          ({ title, description }) => (
+            <div className="strenghts">
+              <h4>{title}</h4>
+              <p>{description}</p>
+            </div>
+          )
+        )}
+        <h2>{texts.sections.strengths.content.weaknesses.tittle}</h2>
+        {texts.sections.strengths.content.weaknesses.weaknessesList.map(
+          ({ tittle, description }) => (
+            <div className="strenghts">
+              <h4>{tittle}</h4>
+              <p>{description}</p>
+            </div>
+          )
+        )}
       </section>
     </div>
   );

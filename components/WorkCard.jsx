@@ -30,11 +30,11 @@ function WorkCard({ work, index, CTA }) {
             {CTA}
           </a>
         </Link>
-        <Link href={work.caseStudyRef}>
+        {/* <Link href={work.caseStudyRef}>
           <a className="CTA work-btn ml-4" target="_blank">
             Case Study
           </a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

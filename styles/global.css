@@ -85,7 +85,10 @@ body {
 .nav-menu {
   @apply relative flex justify-center items-center w-8 h-8 rounded-full bg-secondary-accent;
 }
-
+.nav-logo {
+  @apply bg-base;
+  height: fit-content;
+}
 /* menu lines */
 .nav-menu > div {
   @apply relative bg-txt-secondary-accent w-6 transition-all;
@@ -134,6 +137,9 @@ body {
 }
 /* NAV RESPONSIVE  */
 @media only screen and (min-width: 750px) {
+  .nav-bar {
+    @apply border-b-2 border-primary-accent pl-0;
+  }
   #menu-check {
     @apply hidden;
   }
@@ -147,7 +153,7 @@ body {
     @apply static transform-none flex-row bg-base;
   }
   .nav-menu-item {
-    @apply text-base text-txt-base border-none px-2 py-1;
+    @apply text-base text-txt-base border-none m-0 px-8 py-1;
   }
   .nav-menu-item:hover {
     @apply bg-primary-accent text-txt-primary-accent;
@@ -172,6 +178,12 @@ body {
 }
 .section {
   @apply mx-4 my-24;
+}
+.section-header {
+  @apply mx-auto w-min whitespace-nowrap mb-4;
+}
+.section > h2 {
+  @apply my-16;
 }
 
 /* LANDING PAGE */
@@ -480,4 +492,7 @@ h6 {
 }
 .book-item:hover > h6 {
   @apply max-h-10;
+}
+.strenghts > h4 {
+  @apply mb-4 mt-8 text-primary;
 }
