@@ -70,7 +70,12 @@ function About() {
         <div className="">
           <h1 className="mb-4">Know Me</h1>
           <div className="about-image ">
-            <Image src="/images/me-red.png" layout="fill" objectFit="contain" />
+            <Image
+              src="/images/me-red.png"
+              layout="fill"
+              objectFit="contain"
+              priority="true"
+            />
           </div>
 
           <p className=" mx-auto text-justify">
