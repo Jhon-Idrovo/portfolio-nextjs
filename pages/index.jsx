@@ -25,11 +25,11 @@ export default function Home({ openContact }) {
       <section className="hero " id="home">
         <div className="hero-img ">
           <Image
-            src="/images/me-square.png"
+            src="/images/me-color-blue.png"
             alt="Portrait"
             layout="responsive"
-            width="9"
-            height="9"
+            width="9.60"
+            height="12.67"
             quality="100"
             //to preload image
             priority={true}

@@ -68,11 +68,11 @@ function About() {
         id={encodeURI(texts.sections.knowMe.title)}
       >
         <div className="">
+          <div className="about-image ">
+            <Image src="/images/me-red.png" layout="fill" objectFit="contain" />
+          </div>
           <h1 className="section-header">Know Me</h1>
 
-          <div className="about-image ">
-            <Image src="/images/me2.png" layout="fill" objectFit="contain" />
-          </div>
           <p className=" mx-auto text-justify">
             Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to
             help you with my capabilities.

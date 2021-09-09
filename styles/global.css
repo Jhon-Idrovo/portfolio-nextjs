@@ -268,8 +268,8 @@ h6 {
   }
   /* the img container needs to be positioned */
   .hero-img {
-    @apply relative left-0 bottom-0 w-3/4 overflow-hidden;
-    transform: translateX(3rem);
+    @apply relative left-0 bottom-0 w-2/4 overflow-hidden;
+    transform: translateX(0rem);
   }
   .hero-content {
     @apply absolute block top-0 left-0;
@@ -498,7 +498,7 @@ h6 {
 .about-image {
   @apply float-right relative;
   width: 400px;
-  height: 600px;
+  height: 520px;
 }
 .books-list {
   display: grid;
