@@ -131,7 +131,7 @@ function About() {
         </div>
         <div className="books-list">
           {texts.sections.schooling.content.books.booksList.map((book) => (
-            <Book {...book} />
+            <Book key={book.name} {...book} />
           ))}
         </div>
       </section>
