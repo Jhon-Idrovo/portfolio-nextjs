@@ -71,10 +71,13 @@ function About() {
           <h1 className="mb-4">Know Me</h1>
           <div className="about-image ">
             <Image
-              src="/images/me-red.png"
+              src="https://ik.imagekit.io/z1hpocqao6o/portfolio/me-red_ZL060ggxMm.png?updatedAt=1631186412397"
               layout="fill"
               objectFit="contain"
               priority="true"
+              sizes={
+                "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
+              }
             />
           </div>
 

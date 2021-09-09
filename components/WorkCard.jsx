@@ -22,6 +22,9 @@ function WorkCard({ work, index, CTA }) {
           layout="fill"
           objectFit="scale-down"
           priority={true}
+          sizes={
+            "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
+          }
         />
       </div>
       <div className="mx-auto mt-4 w-min whitespace-nowrap">

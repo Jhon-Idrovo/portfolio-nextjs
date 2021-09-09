@@ -4,6 +4,6 @@ module.exports = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["upload.wikimedia.org"],
+    domains: ["upload.wikimedia.org", "ik.imagekit.io"],
   },
 };

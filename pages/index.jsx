@@ -1,16 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 import { useRouter } from "next/router";
 
-import Card from "../components/Card";
 import BnftsCard from "../components/BnftsCard";
 import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
 import ServiceCard from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
-import Contact from "../components/Contact";
 
 export default function Home({ openContact }) {
   const router = useRouter();
@@ -25,7 +22,7 @@ export default function Home({ openContact }) {
       <section className="hero " id="home">
         <div className="hero-img ">
           <Image
-            src="/images/me-color-blue.png"
+            src="https://ik.imagekit.io/z1hpocqao6o/portfolio/me-color-blue_aNE4qKC2aa.png?updatedAt=1631186431893"
             alt="Portrait"
             layout="responsive"
             width="9.60"
@@ -37,6 +34,7 @@ export default function Home({ openContact }) {
             sizes={
               "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
             }
+            placeholder="blur"
           />
         </div>
         <div className="hero-content">
