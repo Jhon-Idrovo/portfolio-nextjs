@@ -185,9 +185,6 @@ p br {
 .section-header {
   @apply mx-auto w-min whitespace-nowrap mb-4;
 }
-.section > h2 {
-  @apply my-16;
-}
 
 /* LANDING PAGE */
 .img-bg {
@@ -196,10 +193,10 @@ p br {
 }
 
 h1 {
-  @apply text-3xl font-semibold;
+  @apply text-4xl font-semibold;
 }
 h2 {
-  @apply text-4xl font-semibold;
+  @apply text-3xl font-semibold;
 }
 h4 {
   @apply text-3xl;
@@ -518,13 +515,18 @@ h6 {
   @apply max-h-10;
 }
 .strenghts > h4 {
-  @apply mb-4 mt-8 text-primary;
+  @apply mb-0 mt-4 text-primary;
 }
-
+.about-subheader {
+  @apply mt-12 mb-0;
+}
 @media only screen and (max-width: 650px) {
   .about-image {
     width: 200px;
     height: 300px;
+  }
+  .strenghts > h4 {
+    @apply my-2;
   }
 }
 @media only screen and (max-width: 480px) {

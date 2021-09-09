@@ -68,10 +68,10 @@ function About() {
         id={encodeURI(texts.sections.knowMe.title)}
       >
         <div className="">
+          <h1 className="mb-4">Know Me</h1>
           <div className="about-image ">
             <Image src="/images/me-red.png" layout="fill" objectFit="contain" />
           </div>
-          <h1 className="section-header">Know Me</h1>
 
           <p className=" mx-auto text-justify">
             Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to
@@ -108,7 +108,9 @@ function About() {
         id={encodeURI(texts.sections.schooling.title)}
       >
         <h1 className=" section-header">{texts.sections.schooling.title}</h1>
-        <h2>{texts.sections.schooling.content.books.tittle}</h2>
+        <h2 className="about-subheader">
+          {texts.sections.schooling.content.books.tittle}
+        </h2>
         <p className="mt-6">
           {texts.sections.schooling.content.books.description}
         </p>
@@ -130,7 +132,9 @@ function About() {
         className="section"
       >
         <h1 className="section-header">{texts.sections.strengths.title}</h1>
-        <h2>{texts.sections.strengths.content.strengths.title}</h2>
+        <h2 className="about-subheader">
+          {texts.sections.strengths.content.strengths.title}
+        </h2>
         {texts.sections.strengths.content.strengths.strengthsList.map(
           ({ title, description }) => (
             <div key={title} className="strenghts">
@@ -139,7 +143,9 @@ function About() {
             </div>
           )
         )}
-        <h2>{texts.sections.strengths.content.weaknesses.tittle}</h2>
+        <h2 className="about-subheader">
+          {texts.sections.strengths.content.weaknesses.tittle}
+        </h2>
         {texts.sections.strengths.content.weaknesses.weaknessesList.map(
           ({ tittle, description }) => (
             <div key={tittle} className="strenghts">
