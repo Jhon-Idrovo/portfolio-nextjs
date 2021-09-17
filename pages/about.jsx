@@ -7,8 +7,8 @@ import Link from "next/link";
 function About() {
   const router = useRouter();
   const { locale } = router;
-  //const texts = locale === "en" ? en : es;
-  const texts = en.about;
+  const texts = (locale === "es" ? es : en).about;
+  //const texts = en.about;
   const [scrollPercent, setScrollPercent] = useState(0);
   useEffect(() => {
     let height = 0;
@@ -68,7 +68,7 @@ function About() {
         id={encodeURI(texts.sections.knowMe.title)}
       >
         <div className="">
-          <h1 className="mb-4">Know Me</h1>
+          <h1 className="mb-4">{texts.sections.knowMe.title}</h1>
           <div className="about-image ">
             <Image
               src="https://ik.imagekit.io/z1hpocqao6o/portfolio/me-red_ZL060ggxMm.png?updatedAt=1631186412397"
@@ -81,34 +81,10 @@ function About() {
             />
           </div>
 
-          <p className=" mx-auto text-justify">
-            Hi! I'm Jhon Idrovo. I'm a passionate web developer searching to
-            help you with my capabilities.
-            <br />
-            I love reading,that's how I collected most of my knowledge. And
-            that's why I'm what's considered a selft thaugth. Althoug I don't
-            completely agree with that, since I've had the help of a lot of
-            people that has written incredible books, articles and other
-            resources. You can check all the books I've used through my journey
-            on the books section.
-            <br />
-            I'm an avid learner. I have to admit that sometimes I have projects
-            where I don't know a technology works or something similar. But that
-            has never stopped me. I've reached a point where I have my own
-            methodology for learning and using that knowledge to solve the
-            problem at hand. That in fact, is a motivation for me, since I get
-            the chance to stay at the top of the knowledge in my field and
-            sharpen my habilities.
-            <br />
-            My hunger for success and new adventures has led me to study
-            Economics and Business Administration. Knowledge that now combine
-            with programming. This brings me a different point of view when
-            facing problems in eaither of those areas.
-            <br />
-            Now, I'm workning through freelance, and try to meet like minded
-            people. But also I'm planning to join/create a startup in the
-            future.
-          </p>
+          <p
+            className=" mx-auto text-justify"
+            dangerouslySetInnerHTML={{ __html: texts.sections.knowMe.content }}
+          ></p>
         </div>
       </section>
       <section
