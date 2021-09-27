@@ -4,6 +4,7 @@ import { en, es } from "../lib/texts";
 import Image from "next/image";
 import Book from "../components/Book";
 import Link from "next/link";
+import { customLoader } from "../lib/utils";
 function About() {
   const router = useRouter();
   const { locale } = router;
@@ -71,7 +72,8 @@ function About() {
           <h1 className="mb-4">{texts.sections.knowMe.title}</h1>
           <div className="about-image ">
             <Image
-              src="https://ik.imagekit.io/z1hpocqao6o/portfolio/me-red_ZL060ggxMm.png?updatedAt=1631186412397"
+              loader={customLoader}
+              src="v1632652101/portfolio/me-red_x4qkvm"
               layout="fill"
               objectFit="contain"
               priority="true"

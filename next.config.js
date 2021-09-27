@@ -4,6 +4,7 @@ module.exports = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["upload.wikimedia.org", "ik.imagekit.io"],
+    domains: ["upload.wikimedia.org", "ik.imagekit.io", "res.cloudinary.com"],
+    loader: "cloudinary",
   },
 };

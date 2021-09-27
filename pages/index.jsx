@@ -8,12 +8,13 @@ import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
 import ServiceCard from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
+import { buildUrl, setConfig } from "cloudinary-build-url";
+import { customLoader } from "../lib/utils";
 
 export default function Home({ openContact }) {
   const router = useRouter();
   const { locale } = router;
   const texts = locale === "en" ? en : es;
-
   return (
     <>
       <Head>
@@ -22,7 +23,8 @@ export default function Home({ openContact }) {
       <section className="hero " id="home">
         <div className="hero-img ">
           <Image
-            src="https://ik.imagekit.io/z1hpocqao6o/portfolio/me-color-blue_aNE4qKC2aa.png?updatedAt=1631186431893"
+            loader={customLoader}
+            src={"v1632652345/portfolio/me-color-blue_1_rasyjj"}
             alt="Portrait"
             layout="responsive"
             width="9.60"
@@ -32,9 +34,9 @@ export default function Home({ openContact }) {
             priority={true}
             //since the image does not cover the whole viewport
             sizes={
-              "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
+              "(max-width: 640px) 455px, (max-width: 750px) 539px, (max-width: 828px) 600px, (max-width: 1080px) 609px, (max-width: 1200px) 679px, 859px"
             }
-            placeholder="blur"
+            // placeholder="blur"
           />
         </div>
         <div className="hero-content">
@@ -279,16 +281,10 @@ export default function Home({ openContact }) {
             style={{ color: "white", backgroundColor: "#666666" }}
           >
             <svg
-              xmlnsDc="http://purl.org/dc/elements/1.1/"
-              xmlnsCc="http://creativecommons.org/ns#"
-              xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlnsSvg="http://www.w3.org/2000/svg"
               xmlns="http://www.w3.org/2000/svg"
-              xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
               id="Express"
               viewBox="0 0 120 60"
               version="1.1"
-              sodipodiDocname="expressjs-ar21.svg"
             >
               <metadata id="metadata24">
                 {/* <rdf:RDF>

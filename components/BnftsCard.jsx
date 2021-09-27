@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { customLoader } from "../lib/utils";
 
 function BnftsCard({ benefit, index, CTA, children }) {
   return (
@@ -12,6 +13,7 @@ function BnftsCard({ benefit, index, CTA, children }) {
       {benefit.exSrc ? (
         <div className="bnft-ex ">
           <Image
+            loader={customLoader}
             src={benefit.exSrc}
             alt={"ers"}
             layout="fill"

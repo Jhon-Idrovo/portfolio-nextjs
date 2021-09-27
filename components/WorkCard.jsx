@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { customLoader } from "../lib/utils";
 
 function WorkCard({ work, index, CTA }) {
   return (
@@ -11,12 +12,15 @@ function WorkCard({ work, index, CTA }) {
       <h6 className="work-title">{work.title}</h6>
 
       <ul className="work-keypoints-list">
-        {work.keyFunctionality.map((f) => (
-          <li className="work-keypoint">{f}</li>
+        {work.keyFunctionality.map((f, i) => (
+          <li key={i} className="work-keypoint">
+            {f}
+          </li>
         ))}
       </ul>
       <div className="relative work-ex">
         <Image
+          loader={customLoader}
           src={work.src}
           alt="Website snapshot"
           layout="fill"
