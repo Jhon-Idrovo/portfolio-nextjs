@@ -308,10 +308,7 @@ h6 {
   .hero-img {
     width: 45%;
   }
-  .hero-content {
-  }
-  .hero-btn {
-  }
+
   .hero-header {
     margin-top: 10%;
   }
@@ -624,7 +621,5 @@ h6 {
 @media only screen and (min-width: 600px) {
   .main-footer {
     @apply bottom-10 block;
-  }
-  .social-icons-container {
   }
 }
