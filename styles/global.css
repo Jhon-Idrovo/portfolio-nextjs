@@ -571,8 +571,7 @@ h6 {
   @apply w-screen;
 }
 .expectations-container {
-  @apply grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  @apply flex flex-col justify-center items-center;
 }
 .expectation {
   @apply flex flex-col  items-center;
@@ -584,9 +583,16 @@ h6 {
   @apply mx-auto mb-8;
   max-width: 400px;
 }
-@media (min-width: 800px) {
+.expectation-title {
+  @apply mx-auto text-center;
+}
+@media (min-width: 764px) {
   .expectations-subtitle {
     @apply mb-12;
+  }
+  .expectations-container {
+    @apply grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 /* CTAs SECTION */
