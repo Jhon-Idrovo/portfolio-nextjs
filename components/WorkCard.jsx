@@ -3,6 +3,8 @@ import Link from "next/link";
 import { customLoader } from "../lib/utils";
 
 function WorkCard({ work, index, CTA }) {
+  const src = customLoader({ src: work.src, width: 700, quality: 100 });
+  console.log(src, work.src);
   return (
     <div
       className="work-container"
@@ -19,9 +21,8 @@ function WorkCard({ work, index, CTA }) {
         ))}
       </ul>
       <div className="relative work-ex">
-        <Image
-          loader={customLoader}
-          src={work.src}
+        {/* <Image
+          src={src}
           alt="Website snapshot"
           layout="fill"
           objectFit="scale-down"
@@ -29,6 +30,10 @@ function WorkCard({ work, index, CTA }) {
           sizes={
             "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
           }
+        /> */}
+        <img
+          src={customLoader({ src: work.src, width: 700, quality: 100 })}
+          alt=""
         />
       </div>
       <div className="mx-auto mt-4 w-min whitespace-nowrap">

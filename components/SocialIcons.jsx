@@ -10,7 +10,7 @@ function SocialIcons() {
         </Link>
       </div>
       <div className="social-icon">
-        <Link href="https://twitter.com/JhonIdrovo_D">
+        <Link href="https://github.com/Jhon-Idrovo">
           <a target="_blank">
             <i class="fab fa-github-square"></i>
           </a>

@@ -449,6 +449,22 @@ h6 {
   width: 75vw;
   height: 75vw;
 }
+.work-ex img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+}
 .work-btn {
 }
 
@@ -520,6 +536,22 @@ h6 {
   @apply float-right relative;
   width: 400px;
   height: 520px;
+}
+.about-image img {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 .books-list {
   display: grid;

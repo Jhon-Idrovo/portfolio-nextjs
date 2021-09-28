@@ -73,7 +73,7 @@ function About() {
         <div className="">
           <h1 className="mb-4">{texts.sections.knowMe.title}</h1>
           <div className="about-image ">
-            <Image
+            {/* <Image
               loader={customLoader}
               src="v1632652101/portfolio/me-red_x4qkvm"
               layout="fill"
@@ -82,6 +82,14 @@ function About() {
               sizes={
                 "(max-width:640px) 455px,(max-width:750px) 539px, (max-width:828px) 600px, (max-width:1080px) 609px, (max-width:1200px) 679px, 859px"
               }
+            /> */}
+            <img
+              src={customLoader({
+                src: "v1632652101/portfolio/me-red_x4qkvm",
+                width: 700,
+                quality: 100,
+              })}
+              alt=""
             />
           </div>
 
