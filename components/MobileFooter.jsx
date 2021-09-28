@@ -17,7 +17,7 @@ function MobileFooter({ openContact }) {
             </Link>
           </li>
           <li className="footer-item">
-            <Link href="/#benefits">
+            <Link href="/about">
               <a>{texts.footerNavIndex1}</a>
             </Link>
           </li>

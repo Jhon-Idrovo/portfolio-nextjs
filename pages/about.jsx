@@ -5,6 +5,8 @@ import Image from "next/image";
 import Book from "../components/Book";
 import Link from "next/link";
 import { customLoader } from "../lib/utils";
+import FAQ from "../components/FAQ";
+
 function About() {
   const router = useRouter();
   const { locale } = router;
@@ -140,6 +142,12 @@ function About() {
             </div>
           )
         )}
+      </section>
+      <section className="section" id="FAQ">
+        <h1 className="section-header">FAQ</h1>
+        {texts.sections.faq.faqsList.map((el, index) => (
+          <FAQ key={index} {...el} />
+        ))}
       </section>
     </div>
   );
