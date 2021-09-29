@@ -320,6 +320,9 @@ h6 {
   .hero-wave {
     @apply right-0;
   }
+  .hero-img {
+    @apply bottom-0;
+  }
 }
 
 /* SUMMARY */
