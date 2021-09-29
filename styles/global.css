@@ -217,6 +217,9 @@ h6 {
 .separator {
   @apply w-screen;
 }
+.section-blue {
+  @apply bg-primary text-txt-primary;
+}
 @media only screen and (min-width: 850px) {
   h1 {
     @apply text-6xl;
@@ -315,6 +318,13 @@ h6 {
   .hero-wave {
     @apply right-0;
   }
+}
+
+/* SUMMARY */
+
+.summary {
+  @apply mx-4;
+  max-width: 50rem;
 }
 
 /* BENEFITS */
