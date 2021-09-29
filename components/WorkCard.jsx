@@ -3,8 +3,6 @@ import Link from "next/link";
 import { customLoader } from "../lib/utils";
 
 function WorkCard({ work, index, CTA }) {
-  const src = customLoader({ src: work.src, width: 700, quality: 100 });
-  console.log(src, work.src);
   return (
     <div
       className="work-container"
@@ -37,7 +35,7 @@ function WorkCard({ work, index, CTA }) {
         />
       </div>
       <div className="mx-auto mt-4 w-min whitespace-nowrap">
-        <Link href={work.href}>
+        <Link href={work.caseStudyRef}>
           <a className="CTA work-btn" target="_blank">
             {CTA}
           </a>

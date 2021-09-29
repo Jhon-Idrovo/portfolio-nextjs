@@ -644,7 +644,7 @@ h6 {
   @apply bg-primary text-txt-primary flex flex-col justify-center items-center py-8;
 }
 .CTAs-section h4 {
-  @apply my-4;
+  @apply my-4 text-center;
 }
 .CTAs-section button {
   @apply mb-12;

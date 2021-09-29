@@ -14622,7 +14622,7 @@ export default function Home({ openContact }) {
         </h1>
         <div className="works">
           {texts.works.map((w, i) => (
-            <WorkCard key={i} index={i} work={w} CTA={texts.seeItLive} />
+            <WorkCard key={i} index={i} work={w} CTA={texts.detalles} />
           ))}
         </div>
       </section>
