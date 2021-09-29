@@ -36,17 +36,17 @@ function WorkCard({ work, index, CTA }) {
           alt=""
         />
       </div>
-      <div className="mx-auto mt-4 w-min whitespace-nowrap">
+      <div className="mx-auto mt-8 w-min whitespace-nowrap">
         <Link href={work.href}>
           <a className="CTA work-btn" target="_blank">
             {CTA}
           </a>
         </Link>
-        {/* <Link href={work.caseStudyRef}>
+        <Link href={work.repoSrc}>
           <a className="CTA work-btn ml-4" target="_blank">
-            Case Study
+            See it on GitHub
           </a>
-        </Link> */}
+        </Link>
       </div>
     </div>
   );
