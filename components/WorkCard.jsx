@@ -7,6 +7,7 @@ function WorkCard({ work, index, CTA }) {
   console.log(src, work.src);
   return (
     <div
+      id={encodeURI(work.title)}
       className="work-container"
       data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
       data-aos-anchor-placement="center-bottom"
