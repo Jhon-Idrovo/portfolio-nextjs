@@ -320,7 +320,7 @@ export default function Home({ openContact }) {
             <span style={{ borderColor: "#007ACC" }}>Typescript</span>
           </div>
           {/* Nodejs */}
-          <div
+          {/* <div
             className="technology"
             style={{ color: "white", backgroundColor: "#539E43" }}
           >
@@ -339,7 +339,7 @@ export default function Home({ openContact }) {
               </g>
             </svg>
             <span style={{ borderColor: "#539E43" }}>Node.js</span>
-          </div>
+          </div> */}
           {/* Expressjs */}
           <div
             className="technology"
@@ -522,7 +522,7 @@ export default function Home({ openContact }) {
             </svg>
             <span style={{ borderColor: "gray" }}>GitHub</span>
           </div>
-          <div
+          {/* <div
             className="technology"
             style={{ color: "white", backgroundColor: "#fca614" }}
           >
@@ -549,7 +549,7 @@ export default function Home({ openContact }) {
               </g>
             </svg>
             <span style={{ borderColor: "#fca614" }}>Firebase's Firestore</span>
-          </div>
+          </div> */}
           <div
             className="technology"
             style={{ color: "white", backgroundColor: "#499D4A" }}
