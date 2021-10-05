@@ -6,6 +6,7 @@ import Book from "../components/Book";
 import Link from "next/link";
 import { customLoader } from "../lib/utils";
 import FAQ from "../components/FAQ";
+import Blogs from "../components/Blogs";
 
 function About() {
   const router = useRouter();
@@ -157,6 +158,7 @@ function About() {
           <FAQ key={index} {...el} />
         ))}
       </section>
+      <Blogs />
     </div>
   );
 }
