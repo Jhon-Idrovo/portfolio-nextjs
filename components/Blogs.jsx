@@ -7,7 +7,7 @@ function Blogs() {
   const texts = locale === "en" ? en : es;
 
   return (
-    <section className="section blogs">
+    <section className="section blogs" id="blog">
       <h1 className="section-header text-txt-base">{texts.postsTitle}</h1>
       <div className="blogs__container">
         {" "}
