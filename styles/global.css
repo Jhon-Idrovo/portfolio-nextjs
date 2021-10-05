@@ -670,3 +670,10 @@ h6 {
     @apply bottom-10 block;
   }
 }
+/* BLOGS */
+.blog {
+  max-width: 14rem;
+}
+.blogs__container {
+  @apply flex justify-center;
+}

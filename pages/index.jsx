@@ -10,6 +10,7 @@ import ServiceCard from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
 import { buildUrl, setConfig } from "cloudinary-build-url";
 import { customLoader } from "../lib/utils";
+import Blogs from "../components/Blogs";
 
 export default function Home({ openContact }) {
   const router = useRouter();
@@ -14708,6 +14709,7 @@ export default function Home({ openContact }) {
           fill="#1D3557"
         />
       </svg>
+      <Blogs />
     </>
   );
 }
