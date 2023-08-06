@@ -586,10 +586,10 @@ h6 {
   @apply max-h-10;
 }
 .strenghts > h4 {
-  @apply mb-0 mt-4 text-primary;
+  @apply mb-2 mt-8 text-primary;
 }
 .about-subheader {
-  @apply mt-12 mb-0;
+  @apply mt-16 mb-0;
 }
 @media only screen and (max-width: 650px) {
   .about-image {
