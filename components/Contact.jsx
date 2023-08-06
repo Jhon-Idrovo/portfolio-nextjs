@@ -34,7 +34,7 @@ function Contact({ close }) {
               </g>
             </g>
           </svg>
-          <Link href="mailto: jhonidrovo3@gmail.com">
+          <Link href="mailto: jhon.idrovo.applications@gmail.com">
             <a className=" CTA">{texts.sendEmail}</a>
           </Link>
         </div>
