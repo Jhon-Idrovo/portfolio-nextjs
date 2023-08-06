@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { en, es } from "../lib/texts";
-import Image from "next/image";
 import Book from "../components/Book";
 import Link from "next/link";
 import { customLoader } from "../lib/utils";
@@ -12,7 +11,6 @@ function About() {
   const router = useRouter();
   const { locale } = router;
   const texts = (locale === "es" ? es : en).about;
-  //const texts = en.about;
   const [scrollPercent, setScrollPercent] = useState(0);
   useEffect(() => {
     let height = 0;
@@ -86,8 +84,8 @@ function About() {
             /> */}
             <img
               src={customLoader({
-                src: "v1632652101/portfolio/me-red_x4qkvm",
-                width: 700,
+                src: "v1691336013/John-9_khvu88",
+                width: 1200,
                 quality: 100,
               })}
               alt=""

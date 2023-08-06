@@ -1,14 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import { useRouter } from "next/router";
-
-import BnftsCard from "../components/BnftsCard";
-import FAQ from "../components/FAQ";
 import { es, en } from "../lib/texts";
-import ServiceCard from "../components/ServiceCard";
 import WorkCard from "../components/WorkCard";
-import { buildUrl, setConfig } from "cloudinary-build-url";
 import { customLoader } from "../lib/utils";
 import Blogs from "../components/Blogs";
 
@@ -30,8 +24,8 @@ export default function Home({ openContact }) {
         <img
           className="hero-img"
           src={customLoader({
-            src: "v1632652345/portfolio/me-color-blue_1_rasyjj",
-            width: 700,
+            src: "v1691336011/John-14_laxiax",
+            width: 1200,
             quality: 100,
           })}
           alt="Jhon Idrovo Portrait"
