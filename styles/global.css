@@ -328,7 +328,7 @@ h6 {
 /* SUMMARY */
 
 .summary {
-  @apply mx-4;
+  @apply mx-4 text-center;
   max-width: 50rem;
 }
 
@@ -618,7 +618,7 @@ h6 {
   @apply flex flex-col justify-center items-center;
 }
 .expectation {
-  @apply flex flex-col  items-center;
+  @apply flex flex-col  items-center h-full justify-between;
 }
 .expectation svg {
   @apply mx-auto;
