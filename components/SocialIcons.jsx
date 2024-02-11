@@ -17,6 +17,13 @@ function SocialIcons() {
         </Link>
       </div>
       <div className="social-icon">
+        <Link href="https://www.linkedin.com/in/hire-jhon-idrovo/">
+          <a target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </Link>
+      </div>
+      <div className="social-icon">
         <Link href="mailto:jhon.idrovo.applications@gmail.com">
           <a>
             <i className="fas fa-envelope-square"></i>
