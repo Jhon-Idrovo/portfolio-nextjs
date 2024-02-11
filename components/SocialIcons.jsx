@@ -17,7 +17,7 @@ function SocialIcons() {
         </Link>
       </div>
       <div className="social-icon">
-        <Link href="mailto:jhonidrovo3@gmail.com">
+        <Link href="mailto:jhon.idrovo.applications@gmail.com">
           <a>
             <i className="fas fa-envelope-square"></i>
           </a>
