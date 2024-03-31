@@ -13,7 +13,7 @@ export default function Home({ openContact }) {
   return (
     <>
       <Head>
-        <title>Jhon Idrovo: Freelance Web Developer|Hire a web developer</title>
+        <title>Jhon Idrovo: Freelance Web Developer</title>
       </Head>
       <section className="hero " id="home">
         {/* 
@@ -73,7 +73,7 @@ export default function Home({ openContact }) {
       </section>*/}
       <svg
         className="separator-dark-to-ligth"
-        viewBox="0 0 1166 228"
+        viewBox="0 0 1166 227"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -98,7 +98,7 @@ export default function Home({ openContact }) {
           fill="#A8DADC"
         />
       </svg>
-      <section className="section-blue grid justify-center">
+      <section className="section-blue grid justify-center font-extrabold">
         <p className="summary">{texts.summary}</p>
       </section>
       <svg
@@ -608,7 +608,7 @@ export default function Home({ openContact }) {
       </section>
       <svg
         className="separator-dark-to-ligth"
-        viewBox="0 0 1166 228"
+        viewBox="0 0 1166 227"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -14640,7 +14640,7 @@ export default function Home({ openContact }) {
       </section> */}
       <svg
         className="separator-dark-to-ligth"
-        viewBox="0 0 1166 228"
+        viewBox="0 0 1166 227"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
