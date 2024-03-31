@@ -13,7 +13,7 @@ module.exports = {
       secondary: "#F1FAEE", //White
       "txt-secondary": "#1D3557", // Black
       // 10%
-      "primary-accent": "#66B848", //Clear blue => Yellow => green
+      "primary-accent": "#ffff", //Clear blue => Yellow => green
       "txt-primary-accent": "#1D3557",
       "secondary-accent": "#FF8811", //Orange
       "txt-secondary-accent": "#1D3557",
