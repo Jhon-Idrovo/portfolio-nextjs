@@ -190,7 +190,7 @@ h6 {
   @apply font-semibold text-xl;
 }
 .CTA {
-  @apply cursor-pointer py-1 px-2 rounded-md border-secondary-accent border-2 hover:bg-base hover:text-txt-base bg-secondary-accent text-txt-secondary-accent;
+  @apply font-semibold cursor-pointer py-1 px-2 rounded-md border-secondary-accent border-2 hover:bg-base hover:text-txt-base bg-secondary-accent text-txt-secondary-accent;
   --shadow-size: 5px;
   box-shadow: var(--shadow-size) var(--shadow-size) 0px 0px
     rgba(179, 179, 179, 1);
