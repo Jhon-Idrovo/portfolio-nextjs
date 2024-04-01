@@ -1,7 +1,9 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     colors: {
       // 60%
@@ -13,15 +15,13 @@ module.exports = {
       secondary: "#F1FAEE", //White
       "txt-secondary": "#1D3557", // Black
       // 10%
-      "primary-accent": "#ffff", //Clear blue => Yellow => green
+      "primary-accent": "#ffff", // White
       "txt-primary-accent": "#1D3557",
       "secondary-accent": "#FF8811", //Orange
       "txt-secondary-accent": "#1D3557",
       white: colors.white,
+      current: "currentColor",
     },
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
