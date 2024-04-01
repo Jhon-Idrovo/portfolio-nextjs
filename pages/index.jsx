@@ -5,6 +5,7 @@ import { es, en } from "../lib/texts";
 import WorkCard from "../components/WorkCard";
 import { customLoader } from "../lib/utils";
 import Blogs from "../components/Blogs";
+import WorkExperienceCard from "../components/WorkExperienceCard";
 // import fast from "../public/svg/Fast.svg";
 export default function Home({ openContact }) {
   const router = useRouter();
@@ -14611,51 +14612,30 @@ export default function Home({ openContact }) {
       <section className="section" id="portfolio">
         <h1 className="text-txt-base text-center section-header">Experience</h1>
         <div className="flex text-txt-base mx-24 flex-col">
-          <div className="w-full">
-            <h4>miniExtensions</h4>
-            <h5>Full-Time | 2 years 5 months</h5>
-            <div className="ml-8 mt-4">
-              <h6>Product Owner</h6>
-              <p>
-                <p>Responsabilities:</p>
-                <ul>
-                  <li className="list-disc list-inside">
-                    Decide what feature to build next based on the user feedback
-                    + internal intelligence
-                  </li>
-                  <li className="list-disc list-inside">
-                    Outline goals and feature specifications
-                  </li>
-                  <li className="list-disc list-inside">
-                    Delegate tasks to adequate team members
-                  </li>
-                  <li className="list-disc list-inside">Code reviews</li>
-                </ul>
-              </p>
-            </div>
-            <div className="ml-8 mt-4">
-              <h6>Software Engineer</h6>
-              <p>
-                <p>Responsabilities:</p>
-                <ul>
-                  <li className="list-disc list-inside">
-                    Build new features and enhance existing ones
-                  </li>
-                  <li className="list-disc list-inside">
-                    Increase reliability of the app. Reduce bugs reported and
-                    fix existing ones in such a way that they don't cause more
-                    bugs
-                  </li>
-                  <li className="list-disc list-inside">
-                    Deploy hot fixes to production
-                  </li>
-                  <li className="list-disc list-inside">
-                    Test existing features to avoid breaking changes
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
+          <WorkExperienceCard
+            workplace={"miniExtensions"}
+            duration={"2 years 5 months"}
+            positions={[
+              {
+                position: "Product Owner",
+                responsabilities: [
+                  "Decide what feature to build next based on the user feedback + internal intelligence",
+                  "Outline goals and feature specifications",
+                  "Delegate tasks to adequate team members",
+                  "Code reviews",
+                ],
+              },
+              {
+                position: "Software Engineer",
+                responsabilities: [
+                  "Build new features and enhance existing ones",
+                  "Increase reliability of the app. Reduce bugs reported and fix existing ones in such a way that they do not cause more bugs",
+                  "Deploy hot fixes to production",
+                  "Test existing features to avoid breaking changes",
+                ],
+              },
+            ]}
+          />
           <div className="m-8" />
           <div className="w-full">
             <h4>Font Tester</h4>
