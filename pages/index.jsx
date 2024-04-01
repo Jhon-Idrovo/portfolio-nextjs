@@ -14620,16 +14620,38 @@ export default function Home({ openContact }) {
                 <p>Responsabilities:</p>
                 <ul>
                   <li className="list-disc list-inside">
-                    Deciding what feature to build next based on the user
-                    feedback + internal intelligence
+                    Decide what feature to build next based on the user feedback
+                    + internal intelligence
                   </li>
                   <li className="list-disc list-inside">
-                    Outlining goals and feature specifications
+                    Outline goals and feature specifications
                   </li>
                   <li className="list-disc list-inside">
-                    Delegating tasks to adequate team members
+                    Delegate tasks to adequate team members
                   </li>
                   <li className="list-disc list-inside">Code reviews</li>
+                </ul>
+              </p>
+            </div>
+            <div className="ml-8 mt-4">
+              <h6>Software Engineer</h6>
+              <p>
+                <p>Responsabilities:</p>
+                <ul>
+                  <li className="list-disc list-inside">
+                    Build new features and enhance existing ones
+                  </li>
+                  <li className="list-disc list-inside">
+                    Increase reliability of the app. Reduce bugs reported and
+                    fix existing ones in such a way that they don't cause more
+                    bugs
+                  </li>
+                  <li className="list-disc list-inside">
+                    Deploy hot fixes to production
+                  </li>
+                  <li className="list-disc list-inside">
+                    Test existing features to avoid breaking changes
+                  </li>
                 </ul>
               </p>
             </div>
