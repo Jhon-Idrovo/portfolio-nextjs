@@ -14637,27 +14637,20 @@ export default function Home({ openContact }) {
             ]}
           />
           <div className="m-8" />
-          <div className="w-full">
-            <h4>Font Tester</h4>
-            <h5>Full-Time | 2 months</h5>
-            <div className="ml-8 mt-4">
-              <h6>Founder</h6>
-              <p>
-                <p>Responsabilities:</p>
-                <ul>
-                  <li className="list-disc list-inside">
-                    Set up the infrastructure for the application
-                  </li>
-                  <li className="list-disc list-inside">
-                    Outline goals and feature specifications
-                  </li>
-                  <li className="list-disc list-inside">
-                    Build the entire application
-                  </li>
-                </ul>
-              </p>
-            </div>
-          </div>
+          <WorkExperienceCard
+            workplace={"Font Tester"}
+            duration={"2 months"}
+            positions={[
+              {
+                position: "Founder",
+                responsabilities: [
+                  "Set up the infrastructure for the application",
+                  "Outline goals and feature specifications",
+                  " Build the entire application",
+                ],
+              },
+            ]}
+          />
         </div>
         <h1 className="text-txt-base text-center section-header">
           {texts.myWork}
