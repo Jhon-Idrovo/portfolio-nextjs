@@ -14636,7 +14636,6 @@ export default function Home({ openContact }) {
               },
             ]}
           />
-          <div className="m-8" />
           <WorkExperienceCard
             workplace={"Font Tester"}
             duration={"2 months"}
@@ -14647,6 +14646,20 @@ export default function Home({ openContact }) {
                   "Set up the infrastructure for the application",
                   "Outline goals and feature specifications",
                   " Build the entire application",
+                ],
+              },
+            ]}
+          />
+          <WorkExperienceCard
+            workplace={"Asociacion de Apicultores"}
+            duration={"2 months"}
+            positions={[
+              {
+                position: "Full-stack Web Developer",
+                responsabilities: [
+                  "Determine the needs of users",
+                  "Design and implement application to help apicultors to manage their production",
+                  "Update the application with feedback from users",
                 ],
               },
             ]}
