@@ -14610,7 +14610,7 @@ export default function Home({ openContact }) {
       </svg>
       <section className="section" id="portfolio">
         <h1 className="text-txt-base text-center section-header">Experience</h1>
-        <div className="flex text-txt-base mx-8">
+        <div className="flex text-txt-base mx-24 flex-col">
           <div className="w-full">
             <h4>miniExtensions</h4>
             <h5>Full-Time | 2 years 5 months</h5>
@@ -14651,6 +14651,28 @@ export default function Home({ openContact }) {
                   </li>
                   <li className="list-disc list-inside">
                     Test existing features to avoid breaking changes
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div className="m-8" />
+          <div className="w-full">
+            <h4>Font Tester</h4>
+            <h5>Full-Time | 2 months</h5>
+            <div className="ml-8 mt-4">
+              <h6>Founder</h6>
+              <p>
+                <p>Responsabilities:</p>
+                <ul>
+                  <li className="list-disc list-inside">
+                    Set up the infrastructure for the application
+                  </li>
+                  <li className="list-disc list-inside">
+                    Outline goals and feature specifications
+                  </li>
+                  <li className="list-disc list-inside">
+                    Build the entire application
                   </li>
                 </ul>
               </p>
