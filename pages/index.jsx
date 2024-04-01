@@ -14608,8 +14608,33 @@ export default function Home({ openContact }) {
           fill="#1D3557"
         />
       </svg>
-
       <section className="section" id="portfolio">
+        <h1 className="text-txt-base text-center section-header">Experience</h1>
+        <div className="flex text-txt-base mx-8">
+          <div className="w-full">
+            <h4>miniExtensions</h4>
+            <h5>Full-Time | 2 years 5 months</h5>
+            <div className="ml-8 mt-4">
+              <h6>Product Owner</h6>
+              <p>
+                <p>Responsabilities:</p>
+                <ul>
+                  <li className="list-disc list-inside">
+                    Deciding what feature to build next based on the user
+                    feedback + internal intelligence
+                  </li>
+                  <li className="list-disc list-inside">
+                    Outlining goals and feature specifications
+                  </li>
+                  <li className="list-disc list-inside">
+                    Delegating tasks to adequate team members
+                  </li>
+                  <li className="list-disc list-inside">Code reviews</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
         <h1 className="text-txt-base text-center section-header">
           {texts.myWork}
         </h1>
