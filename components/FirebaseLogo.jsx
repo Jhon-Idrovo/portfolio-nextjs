@@ -2,9 +2,9 @@ function FirebaseLogo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="2500"
-      height="713"
-      viewBox="0 0 512 146"
+      width="3500"
+      height="1713"
+      viewBox="0 0 120 70"
     >
       <filter height="2" width="2" y="-.5" x="-.5" id="A">
         <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" />
