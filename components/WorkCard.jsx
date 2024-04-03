@@ -38,12 +38,12 @@ function WorkCard({ work, index, CTA }) {
         />
       </div>
       <div className="mx-auto mt-8 w-min whitespace-nowrap">
-        <Link href={work.href}>
+        <Link href={work.href} legacyBehavior>
           <a className="CTA work-btn" target="_blank">
             {CTA}
           </a>
         </Link>
-        <Link href={work.repoSrc}>
+        <Link href={work.repoSrc} legacyBehavior>
           <a className="CTA work-btn ml-4" target="_blank">
             See it on GitHub
           </a>

@@ -57,7 +57,7 @@ function About() {
               className="absolute text-primary-accent"
               id={`${section.title}-indicator`}
             >
-              <Link href={`/about/#${encodeURI(section.title)}`}>
+              <Link href={`/about/#${encodeURI(section.title)}`} legacyBehavior>
                 <a>{section.title}</a>
               </Link>
             </li>

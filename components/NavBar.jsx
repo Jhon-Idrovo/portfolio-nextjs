@@ -13,7 +13,7 @@ function NavBar() {
 
   return (
     <nav className="nav-bar">
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a className="nav-logo">
           <svg
             id="sign"
@@ -104,7 +104,7 @@ function NavBar() {
                 router.pathname === "/" + item.ref ? "active" : ""
               }`}
             >
-              <Link href={`/${item.ref}`}>
+              <Link href={`/${item.ref}`} legacyBehavior>
                 <a onClick={() => setIsNavOpen(false)}>{item.text}</a>
               </Link>
             </li>

@@ -12,17 +12,17 @@ function MobileFooter({ openContact }) {
       <nav className="footer-nav">
         <ul className="mx-auto flex">
           <li className="footer-item">
-            <Link href="/#portfolio">
+            <Link href="/#portfolio" legacyBehavior>
               <a>{texts.footerNavIndex}</a>
             </Link>
           </li>
           <li className="footer-item">
-            <Link href="/about">
+            <Link href="/about" legacyBehavior>
               <a>{texts.footerNavIndex1}</a>
             </Link>
           </li>
           <li className="footer-item">
-            <Link href="/#contact">
+            <Link href="/#contact" legacyBehavior>
               <a onClick={openContact}>{texts.footerNavIndex2}</a>
             </Link>
           </li>
