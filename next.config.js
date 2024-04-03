@@ -7,6 +7,7 @@ module.exports = {
   images: {
     domains: ["upload.wikimedia.org", "ik.imagekit.io", "res.cloudinary.com"],
     loader: "cloudinary",
+    path: "https://res.cloudinary.com/",
   },
   webpack(config) {
     config.module.rules.push({

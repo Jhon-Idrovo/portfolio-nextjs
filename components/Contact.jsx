@@ -34,7 +34,7 @@ function Contact({ close }) {
               </g>
             </g>
           </svg>
-          <Link href="mailto: jhon.idrovo.applications@gmail.com">
+          <Link href="mailto: jhon.idrovo.applications@gmail.com" legacyBehavior>
             <a className=" CTA">{texts.sendEmail}</a>
           </Link>
         </div>
@@ -57,7 +57,7 @@ function Contact({ close }) {
               </g>
             </g>
           </svg>
-          <Link href="tel:+593-0961301416">
+          <Link href="tel:+593-0961301416" legacyBehavior>
             <a className="CTA">{texts.call}</a>
           </Link>
         </div>

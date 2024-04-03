@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import MobileFooter from "../components/MobileFooter";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function App({ Component, pageProps }) {
 
       <NavBar />
       <Component openContact={openContact} {...pageProps} />
+      <Analytics />
       {isContactOpen ? <Contact close={closeContact} /> : null}
       <Footer></Footer>
       <MobileFooter openContact={openContact} />
