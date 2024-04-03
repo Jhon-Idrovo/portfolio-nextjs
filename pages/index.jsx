@@ -6,7 +6,8 @@ import WorkCard from "../components/WorkCard";
 import { customLoader } from "../lib/utils";
 import Blogs from "../components/Blogs";
 import WorkExperienceCard from "../components/WorkExperienceCard";
-// import fast from "../public/svg/Fast.svg";
+import FirebaseLogo from "../components/FirebaseLogo";
+
 export default function Home({ openContact }) {
   const router = useRouter();
   const { locale } = router;
@@ -588,6 +589,13 @@ export default function Home({ openContact }) {
               </g>
             </svg>
             <span style={{ borderColor: "#499D4A" }}>MongoDB</span>
+          </div>
+          <div
+            className="technology"
+            style={{ color: "white", backgroundColor: "white" }}
+          >
+            <FirebaseLogo />
+            <span style={{ borderColor: "white" }}>Firebase</span>
           </div>
         </div>
         {/* <svg
