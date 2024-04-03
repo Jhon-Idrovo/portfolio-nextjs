@@ -21,8 +21,8 @@ function MobileFooter({ openContact }) {
               <a>{texts.footerNavIndex1}</a>
             </Link>
           </li>
-          <li className="footer-item" legacyBehavior>
-            <Link href="/#contact">
+          <li className="footer-item">
+            <Link href="/#contact" legacyBehavior>
               <a onClick={openContact}>{texts.footerNavIndex2}</a>
             </Link>
           </li>
