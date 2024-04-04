@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { es, en } from "../lib/texts";
@@ -7,11 +8,17 @@ import { customLoader } from "../lib/utils";
 import Blogs from "../components/Blogs";
 import WorkExperienceCard from "../components/WorkExperienceCard";
 import FirebaseLogo from "../components/FirebaseLogo";
+import { useEffect } from "react";
 
+// Import the component without SSR
+const NoSSRComponent = dynamic(() => import("../components/HeroHeader"), {
+  ssr: false,
+});
 export default function Home({ openContact }) {
   const router = useRouter();
   const { locale } = router;
   const texts = locale === "en" ? en : es;
+
   return (
     <>
       <Head>
@@ -33,9 +40,7 @@ export default function Home({ openContact }) {
           alt="Jhon Idrovo Portrait"
         />
         <div className="hero-content">
-          <h1 className=" hero-header text-txt-base w-1/2 z-10 ">
-            {texts.indexHero}
-          </h1>
+          <NoSSRComponent />
           <p className="hero-subheader text-txt-base w-1/2 z-10 mt-4">
             {texts.indexHeroSubheader}
           </p>
