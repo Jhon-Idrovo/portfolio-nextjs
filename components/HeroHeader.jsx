@@ -13,7 +13,7 @@ function HeroHeader() {
 
     let wordArray = []; //will store arrays of letters for each word
     let currentWord = 0; //will store the index of the currently displayed word;
-    console.log(words);
+
     words[currentWord].style.opacity = 1;
     const splitLetters = (word) => {
       let content = word.innerText;
@@ -62,7 +62,6 @@ function HeroHeader() {
       //update currentWord index.
       currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
     };
-    changeWord(); //initial call
     setInterval(changeWord, 4000); //call every 4s bac
   }, []);
   return (
