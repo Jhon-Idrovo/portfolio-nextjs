@@ -16,8 +16,6 @@ function About() {
     let height = 0;
     Object.values(texts.sections).map(({ title }) => {
       let listItem = document.getElementById(`${title}-indicator`);
-      console.log(listItem, height);
-      console.log(document.getElementById(encodeURI(title)));
       const scrollDistance =
         (height /
           (document.documentElement.scrollHeight - window.innerHeight)) *
@@ -28,7 +26,7 @@ function About() {
         `top:${scrollDistance}%; left:${scrollDistance}%`
       );
       // add the heigth of the section, this way we get the start of the next section
-      height = height + document.getElementById(encodeURI(title)).scrollHeight;
+      height = height + listItem.scrollHeight;
     });
     const handleScroll = (e) => {
       const scrollable = height;

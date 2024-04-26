@@ -14623,60 +14623,13 @@ export default function Home({ openContact }) {
         />
       </svg>
       <section className="section" id="portfolio">
-        <h1 className="text-txt-base text-center section-header">Experience</h1>
+        <h1 className="text-txt-base text-center section-header">
+          {texts.workExperienceSection.sectionName}
+        </h1>
         <div className="flex text-txt-base mx-24 flex-col">
-          <WorkExperienceCard
-            workplace={"miniExtensions"}
-            duration={"2 years 5 months"}
-            positions={[
-              {
-                position: "Product Owner",
-                responsabilities: [
-                  "Decide what feature to build next based on the user feedback + internal intelligence",
-                  "Outline goals and feature specifications",
-                  "Delegate tasks to adequate team members",
-                  "Code reviews",
-                ],
-              },
-              {
-                position: "Software Engineer",
-                responsabilities: [
-                  "Build new features and enhance existing ones",
-                  "Increase reliability of the app. Reduce bugs reported and fix existing ones in such a way that they do not cause more bugs",
-                  "Deploy hot fixes to production",
-                  "Test existing features to avoid breaking changes",
-                ],
-              },
-            ]}
-          />
-          <WorkExperienceCard
-            workplace={"Font Tester"}
-            duration={"2 months"}
-            positions={[
-              {
-                position: "Founder",
-                responsabilities: [
-                  "Set up the infrastructure for the application",
-                  "Outline goals and feature specifications",
-                  " Build the entire application",
-                ],
-              },
-            ]}
-          />
-          <WorkExperienceCard
-            workplace={"Asociacion de Apicultores"}
-            duration={"2 months"}
-            positions={[
-              {
-                position: "Full-stack Web Developer",
-                responsabilities: [
-                  "Determine the needs of users",
-                  "Design and implement application to help apicultors to manage their production",
-                  "Update the application with feedback from users",
-                ],
-              },
-            ]}
-          />
+          {texts.workExperienceSection.works.map((w, i) => {
+            return <WorkExperienceCard {...w} key={i} />;
+          })}
         </div>
         <h1 className="text-txt-base text-center section-header">
           {texts.myWork}
