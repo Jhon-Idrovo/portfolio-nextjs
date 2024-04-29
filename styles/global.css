@@ -656,7 +656,7 @@ h6 {
   @apply w-screen;
 }
 .expectations-container {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center mx-4;
 }
 .expectation {
   @apply flex flex-col  items-center h-full justify-between;
