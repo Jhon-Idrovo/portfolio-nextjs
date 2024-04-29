@@ -23,3 +23,10 @@ function WorkExperienceCard({ workplace, duration, positions }) {
   );
 }
 export default WorkExperienceCard;
+
+export async function getStaticProps(context) {
+  // Fetch data at build time
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}

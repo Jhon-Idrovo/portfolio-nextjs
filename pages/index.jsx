@@ -6,7 +6,6 @@ import { es, en } from "../lib/texts";
 import WorkCard from "../components/WorkCard";
 import { customLoader } from "../lib/utils";
 import Blogs from "../components/Blogs";
-import WorkExperienceCard from "../components/WorkExperienceCard";
 import FirebaseLogo from "../components/FirebaseLogo";
 import { useEffect } from "react";
 
@@ -14,6 +13,13 @@ import { useEffect } from "react";
 const NoSSRComponent = dynamic(() => import("../components/HeroHeader"), {
   ssr: false,
 });
+// Import the component without SSR
+const WorkExperienceCard = dynamic(
+  () => import("../components/WorkExperienceCard"),
+  {
+    ssr: false,
+  }
+);
 export default function Home({ openContact }) {
   const router = useRouter();
   const { locale } = router;
@@ -14628,7 +14634,14 @@ export default function Home({ openContact }) {
         </h1>
         <div className="flex text-txt-base mx-24 flex-col">
           {texts.workExperienceSection.works.map((w, i) => {
-            return <WorkExperienceCard {...w} key={i} />;
+            return (
+              <WorkExperienceCard
+                duration={w.duration}
+                positions={w.positions}
+                workplace={w.workplace}
+                key={i}
+              />
+            );
           })}
         </div>
         <h1 className="text-txt-base text-center section-header">
